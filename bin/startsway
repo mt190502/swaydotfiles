@@ -1,0 +1,8 @@
+#!/bin/bash
+if [[ -n "$(ps aux | grep -v grep | grep '/bin/bash /home/fedora/scripts/startsway')" ]] && [[ -n "$(ps aux | grep -v grep | grep -i ' sway$')" ]]; then
+	echo "Sway already started"
+else
+	export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)
+	dbus-update-activation-environment --systemd --all
+	sway &>~/.swaylog
+fi

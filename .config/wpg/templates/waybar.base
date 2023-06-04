@@ -1,0 +1,108 @@
+@define-color colorin    {inactive};
+@define-color background {color0};
+@define-color foreground {color1};
+@define-color color15    #ffffff;
+@define-color split      {color10};
+
+
+* {{
+ border-radius: 0;
+ font-family: Ubuntu Medium, FontAwesome5Brands, FontAwesome5Free, Arial, sans-serif;
+ font-size: 13px;
+ min-height: 0;
+}}
+
+
+window#waybar {{
+ background-color: @background;
+ color: @color15;
+ transition-property: background-color;
+ transition-duration: .5s;
+}}
+
+
+#workspaces button {{
+ padding: 0 5px;
+ background-color: @background;
+ color: @color15;
+}}
+
+
+#workspaces button:hover {{
+ background-color: @background;
+}}
+
+
+#workspaces button.focused {{
+ background-color: @foreground;
+ color: @color15;
+ border-top: 3px solid @background;
+ border-bottom: 3px solid @background;
+ padding: 0 5px 0 2px;
+}}
+
+
+#workspaces button.urgent {{
+ border-top: 3px solid @foreground;
+ border-bottom: 3px solid @foreground;
+ background-color: #eb4d4b;
+}}
+
+
+#custom-powermenu,
+#clock,
+#tray,
+#network,
+#language,
+#custom-screenshot {{
+ padding: 0 10px 0 10px;
+ margin: 0 4px;
+ background-color: @foreground;
+ color: @color15;
+ border-top: 3px solid @background;
+ border-bottom: 3px solid @background;
+}}
+
+#battery,
+#custom-clipboard,
+#custom-fan,
+#backlight,
+#mode,
+#idle_inhibitor,
+#pulseaudio {{
+ padding: 0 10px 0 10px;
+ margin: 0 4px;
+ background-color: @background;
+ color: @color15;
+ border-top: 3px solid @background;
+ border-bottom: 3px solid @background;
+}}
+
+
+#window {{
+ margin: 0 4px;
+ background-color: @foreground;
+ color: @color15;
+ border-top: 3px solid @background;
+ border-bottom: 3px solid @background;
+}}
+
+
+.modules-left > widget:first-child > #workspaces {{
+ margin-left: 0;
+}}
+
+
+.modules-right > widget:last-child > #workspaces {{
+ margin-right: 0;
+}}
+
+
+window#waybar.empty #window {{
+ background: rgba(12, 12, 12, 0.0);
+}}
+
+#workspaces {{
+ margin: 0 4px;
+ margin-right: 10px;
+}}

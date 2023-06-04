@@ -1,0 +1,23 @@
+sort=-time
+layer=overlay
+background-color={color0}
+width=400
+height=110
+border-size=4
+border-color={color1}
+border-radius=5
+margin=16
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=Ubuntu Medium 10
+
+[urgency=low]
+border-color={color1}
+
+[urgency=normal]
+border-color={color1}
+
+[urgency=high]
+border-color=#FF0000
+default-timeout=0

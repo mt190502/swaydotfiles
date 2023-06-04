@@ -1,0 +1,301 @@
+{
+    ////////////////////////////////////////
+    //
+    //// Layer
+    //
+    ////////////////////////////////////////
+    // "layer": "top", // Waybar at top layer
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Bar Position
+    //
+    ////////////////////////////////////////
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Bar Height / Width
+    //
+    ////////////////////////////////////////
+    "height": 26, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Modules and Orders
+    //
+    ////////////////////////////////////////
+    "modules-left":   ["custom/space", "sway/workspaces", "sway/mode", "sway/window"],
+    "modules-center": ["clock"],
+    "modules-right":  ["tray", "custom/fan", "custom/screenshot", "custom/clipboard", "backlight", "sway/language", "idle_inhibitor", "network", "pulseaudio", "custom/btHeadsetBattery", "custom/seperator", "custom/mpris", "custom/powermenu", "custom/space"],
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //
+    ////                       Modules Configuration                            ////
+    //
+    ////////////////////////////////////////////////////////////////////////////////
+    //
+    //// Workspaces
+    //
+    ////////////////////////////////////////
+    "sway/workspaces": {
+    //    "disable-scroll": true,
+    //    "all-outputs": true,
+          "format": " {}"
+    //    "format": "{name}: {icon}",
+    //    "format-icons": {
+    //    "1": "",
+    //    "2": "",
+    //    "3": "",
+    //    "4": "",
+    //    "5": "",
+    //    "urgent": "",
+    //    "focused": "",
+    //    "default": ""
+    //    }
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Sway Mode
+    //
+    ////////////////////////////////////////
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>",
+        "tooltip": false,
+
+
+
+	////////////////////////////////////////
+	//
+	//// Sway language
+	//
+	////////////////////////////////////////
+    },
+	"sway/language": {
+		"format": "{short} {variant}",
+		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+	},
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Sway Window
+    //
+    ////////////////////////////////////////
+    "sway/window": {
+        "format": "   {}   ",
+    	"max-length": 50,
+    	"rewrite": {
+	       "(.*) - Chromium": "Chromium"
+    	},
+        "tooltip": false,
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Idle Inhibitor
+    //
+    ////////////////////////////////////////
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// System Tray
+    //
+    ////////////////////////////////////////
+    "tray": {
+     //   "icon-size": 21,
+          "spacing": 10
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// System Clock
+    //
+    ////////////////////////////////////////
+    "clock": {
+     //   "timezone": "America/New_York",
+          "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+          "format": "{:%a %d %b  %H:%M:%S}",
+     //   "format": "  {:%H:%M:%S}",
+          "interval": 1
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Network
+    //
+    ////////////////////////////////////////
+    "network": {
+     //   "interface": "wlp2*", // (Optional) To force the use of this interface
+          "tooltip": false,
+          "format-wifi": "",
+          "format-ethernet": "  {ifname}",
+          "format-linked": "  {ifname} (No IP)",
+          "format-disconnected": "⚠  Disconnected",
+     //   "format-alt": "{ifname}: {ipaddr}/{cidr}",
+          "format-alt": " [ {essid} ]",
+          "on-click-right": "kitty -T nmtui -e $HOME/.local/bin/nmtui"
+    },
+
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Sound
+    //
+    ////////////////////////////////////////
+    "pulseaudio": {
+    //    "scroll-step": 1,                                 // %, can be a float
+          "tooltip": false,
+          "format": "{icon} {volume}%",
+          "format-bluetooth": "{icon}  {volume}%",
+          "format-bluetooth-muted": "{icon}  ",
+          "format-muted": "",
+          "format-source-muted": "",
+          "format-icons": {
+              "headphone": "",
+              "hands-free": "",
+              "headset": "",
+              "phone": "",
+              "portable": "",
+              "car": "",
+              "default": [" ", " ", " "]
+          },
+          "scroll-step": 5,
+          "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	  "on-click-right": "pavucontrol",
+          "on-scroll-up": "$HOME/.config/sway/scripts.d/sound.py --set +5",
+          "on-scroll-down": "$HOME/.config/sway/scripts.d/sound.py --set -5"
+    },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Backlight (for Laptops)
+    //
+    ////////////////////////////////////////
+    //"backlight": {
+    //    "device": "intel_backlight",
+    //    "format": "{icon}  {percent}%",
+    //    "format-icons": [""],
+    //    "on-scroll-up": "$HOME/.config/sway/scripts.d/brightness.sh up",
+    //    "on-scroll-down": "$HOME/.config/sway/scripts.d/brightness.sh down"
+    //},
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Battery (for Laptops)
+    //
+    ////////////////////////////////////////
+    // "battery": {
+    //   "states": {
+    //       "good": 95,
+    //       "warning": 30,
+    //       "critical": 15
+    //   },
+    //      "format": "{icon}  {capacity}%",
+    //      "format-charging": "  {capacity}%",
+    //      "format-charging-alt": "  {capacity}%  [{time}]",
+    //      "format-plugged": "  {capacity}%",
+    //      "format-alt": "{icon} {capacity}%  [{time}]",
+    //   "format-good": "", // An empty format will hide the module
+    //   "format-full": "",
+    //       "format-icons": ["", "", "", "", ""]
+    // },
+    // "battery#bat2": {
+    //      "bat": "BAT2"
+    // },
+
+
+
+    ////////////////////////////////////////
+    //
+    //// Others
+    //
+    ////////////////////////////////////////
+    "custom/space": {
+        "format": " ",
+        "tooltip": false,
+        "interval": 10000
+    },
+    "custom/seperator": {
+        "format": "|  ",
+        "tooltip": false,
+        "interval": 10000
+    },
+    "custom/powermenu": {
+        "format": "",
+        "interval": 3600,
+        "tooltip": false,
+        "on-click": "$HOME/.config/sway/scripts.d/powermenu.sh"
+    },
+    "custom/screenshot": {
+        "format": "",
+        "interval": 3600,
+        "tooltip": false,
+        "on-click": "$HOME/.config/sway/scripts.d/screenshot.sh"
+    },
+	"custom/btHeadsetBattery": {
+	"format": "{}",
+	"interval": 5,
+	"tooltip": false,
+	"exec": "$HOME/.config/sway/scripts.d/btHeadsetBattery.sh",
+	"on-scroll-up": "$HOME/.config/sway/scripts.d/sound.py --set +5",
+	"on-scroll-down": "$HOME/.config/sway/scripts.d/sound.py --set -5"
+    },
+    "custom/mpris": {
+	"format": "  {}    ",
+	"return-type": "json",
+	"interval": 1,
+	"max-length": 50,
+	"exec": "python3 $HOME/.config/sway/scripts.d/mpris.py",
+	"on-click": "playerctl play-pause",
+	"on-scroll-up": "playerctl position 5s+",
+        "on-scroll-down": "playerctl position 5s-",
+    },
+    "custom/fan": {
+        "exec": "cat $(find /sys/devices/platform -iname '*fan1_input' 2>/dev/null)",
+        "format": "  {} RPM",
+        "tooltip": false,
+        "interval": 1
+    },
+    "custom/clipboard": {
+        "format": "",
+        "tooltip": false,
+        "interval": 10000,
+        "on-click": "python3 $HOME/.config/sway/scripts.d/clipboard.py -W",
+	"on-click-right": "rm $HOME/.cache/clipboard_history.json && python3 $HOME/.config/sway/scripts.d/clipboard.py -w"
+    }
+}

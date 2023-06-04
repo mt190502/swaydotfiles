@@ -1,0 +1,3 @@
+[Default]
+save_dir=/tmp
+save_filename_format=swappy-%Y%m%d-%H%M%S.png

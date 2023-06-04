@@ -1,0 +1,233 @@
+###############################
+#
+## Floating Modifier Button
+#
+###############################
+floating_modifier $mod
+
+
+
+###############################
+#
+## Change Focus
+#
+###############################
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+
+
+###############################
+#
+## Move Focused Window
+#
+###############################
+bindsym $mod+Shift+h     move left
+bindsym $mod+Shift+j     move down
+bindsym $mod+Shift+k     move up
+bindsym $mod+Shift+l     move right
+
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Down  move down
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Right move right
+
+
+
+###############################
+#
+## Horizontal Split
+#
+###############################
+bindsym $mod+h split h
+
+
+
+###############################
+#
+## Vertical Split
+#
+###############################
+bindsym $mod+v split v
+
+
+
+###############################
+#
+## Fullscreen
+#
+###############################
+bindsym $mod+f fullscreen
+
+
+
+###############################
+#
+## Workspace Layout Changer
+#
+###############################
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+
+
+###############################
+#
+## Toggle tiling / floating
+#
+###############################
+bindsym $mod+Shift+space floating toggle
+
+
+
+###############################
+#
+## Focus the parent container
+#
+###############################
+bindsym $mod+a focus parent
+
+
+
+###############################
+#
+## Navigate workspaces
+#
+###############################
+#bindsym $mod+Ctrl+Right workspace next
+#bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+Tab workspace next
+bindsym $mod+quotedbl+Tab workspace prev
+
+
+
+###############################
+#
+## PulseAudio
+#
+###############################
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec python3 $HOME/.config/sway/scripts.d/sound.py --set +5
+bindsym XF86AudioLowerVolume exec python3 $HOME/.config/sway/scripts.d/sound.py --set -5
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+
+
+###############################
+#
+## Brightness
+#
+###############################
+bindsym XF86MonBrightnessUp   exec $HOME/.config/sway/scripts.d/brightness.sh up
+bindsym XF86MonBrightnessDown exec $HOME/.config/sway/scripts.d/brightness.sh down
+
+
+
+###############################
+#
+## Playerctl
+#
+###############################
+bindsym XF86AudioPlay  exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext  exec playerctl next
+bindsym XF86AudioPrev  exec playerctl previous
+
+
+
+###############################
+#
+## Screenshot
+#
+###############################
+bindsym Print        exec ~/.config/sway/scripts.d/screenshot.sh full
+bindsym Mod4+shift+s exec ~/.config/sway/scripts.d/screenshot.sh rec
+
+
+
+###############################
+#
+## Others
+#
+###############################
+bindsym $mod+Return exec $HOME/.config/sway/scripts.d/terminal.sh default
+bindsym ctrl+period exec $HOME/.config/sway/scripts.d/terminal.sh dropdown
+bindsym $mod+q kill
+bindsym XF86Explorer exec swaymsg input type:keyboard xkb_switch_layout next
+
+
+
+###############################
+#
+## PowerMenu
+#
+###############################
+#bindsym $mod+Shift+e mode "$mode_system"
+#set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+#mode "$mode_system" {
+#    bindsym l exec --no-startup-id i3exit lock, mode "default"
+#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+#    bindsym e exec --no-startup-id i3exit logout, mode "default"
+#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+#
+#    # exit system mode: "Enter" or "Escape"
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
+bindsym $mod+Shift+e exec $HOME/.config/sway/scripts.d/powermenu.sh
+
+
+
+###############################
+#
+## Reload the configuration file
+#
+###############################
+bindsym $mod+Shift+r reload
+
+
+
+###############################
+#
+## Menu
+#
+###############################
+bindsym $mod+d exec $menu
+
+
+###############################
+#
+## Clipboard Menu
+#
+###############################
+bindsym $mod+c exec tac $HOME/.clipboard-history | wofi --dmenu | wl-copy
+bindsym $mod+Shift+c exec echo "" > $HOME/.clipboard-history
+
+
+
+###############################
+#
+## ResizeMode
+#
+###############################
+mode "resize" {
+    bindsym Right resize shrink width 10 px or 10 ppt
+    bindsym Up resize grow height 10 px or 10 ppt
+    bindsym Down resize shrink height 10 px or 10 ppt
+    bindsym Left resize grow width 10 px or 10 ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+
+
+

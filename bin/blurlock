@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for output in $(swaymsg -t get_outputs | jq -r '.[].name'); do
+	image=/tmp/$output-lock
+	grim -o $output $image.png
+	convert -blur 0x6 $image.png $image-blurred.png
+	args="$args --image $output:$image-blurred.png"
+done
+
+swaylock $args &

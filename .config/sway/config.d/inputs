@@ -1,0 +1,46 @@
+###############################
+#
+## Keyboard
+#
+###############################
+#input type:keyboard {                If this setting is enabled, firefox will crash. 
+#	xkb_layout tr,us,gb               Visit: https://bugzilla.mozilla.org/show_bug.cgi?id=1652820
+#	xkb_numlock enabled
+#}
+
+input "10874:39448:CASUE_CASUE_USB_Keyboard" {
+	xkb_numlock enabled
+	xkb_layout us,tr,gb
+}
+
+
+
+###############################
+#
+## Touchpad
+#
+###############################
+#input type:touchpad {                If this setting is enabled, firefox will crash.
+#    dwt enabled                      Visit: https://bugzilla.mozilla.org/show_bug.cgi?id=1652820
+#    tap enabled
+#    natural_scroll enabled
+#    middle_emulation enabled
+#}
+
+exec_always swaymsg input type:touchpad {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+
+
+###############################
+#
+## GTK - Wayland
+#
+###############################
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+

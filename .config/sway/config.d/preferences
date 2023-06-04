@@ -1,0 +1,97 @@
+###############################
+#
+## Application Launcher
+#
+###############################
+set $menu wofi --show
+
+
+
+
+###############################
+#
+## Idle 
+#
+###############################
+exec_always swayidle -w timeout 60 'blurlock && sleep 2 && swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+
+
+
+
+###############################
+#
+## Monitor Config
+#
+###############################
+#output VGA-1    pos 0 0
+#output HDMI-A-1 pos 1920 0
+
+
+
+###############################
+#
+## Wallpaper
+#
+###############################
+output "*" bg ~/.config/wpg/.current fill
+
+
+
+
+###############################
+#
+## Load Gnome Schemas
+#
+###############################
+set $gnome-schema org.gnome.desktop.interface
+
+
+
+###############################
+#
+## Startup Other Program(s)
+#
+###############################
+exec_always --no-startup-id $HOME/.config/sway/scripts.d/starter.sh
+
+
+
+###############################
+#
+## Cursor Theme Config
+#
+###############################
+seat seat0 xcursor_theme Yaru 16
+
+
+
+###############################
+#
+## Gaps config
+#
+###############################
+gaps inner 15
+gaps outer 0
+default_border pixel 5
+default_floating_border none
+hide_edge_borders --i3 none
+
+
+###############################
+#
+## Workspace Layout
+#
+###############################
+workspace_layout default
+
+
+
+###############################
+#
+## StatusBar
+#
+###############################
+bar {
+    swaybar_command waybar
+    workspace_buttons yes
+}
