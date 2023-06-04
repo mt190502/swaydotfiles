@@ -1,6 +1,6 @@
 # My Swaydots
 
-<p align="center"><img src="https://github.com/discover02/swaydotfiles/raw/main/screenshot.png"></img></p>
+<p align="center"><img src="https://github.com/inspectorgadget03/swaydotfiles/blob/old/screenshot.png"></img></p>
 
 <br>
 
