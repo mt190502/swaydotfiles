@@ -16,7 +16,7 @@
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
 	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
-	"modules-right"  : [ "tray", "custom/space", "custom/fan", "custom/space", "custom/screenshot", "custom/space", "custom/translator", "custom/space", "custom/clipboard", "custom/space", "sway/language", "custom/space", "idle_inhibitor", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "custom/fan", "custom/space", "custom/clipboard", "custom/space", "sway/language", "custom/space", "idle_inhibitor", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
 
 
 
@@ -28,18 +28,18 @@
 	"sway/workspaces": {
 		"format"                   : "{}",
 		"format-icons": {
-                        "focused"          : "",
-			"default"          : ""
+			"focused"              : "",
+			"default"              : ""
 		},
-		"persistent_workspaces": {
-			"1"                : ["HDMI-A-4"],
-			"2"                : ["HDMI-A-4"],
-			"3"                : ["HDMI-A-4"],
-			"4"                : ["HDMI-A-4"],
-			"5"                : ["DP-2"],
-			"6"                : ["DP-2"],
-			"7"                : ["DP-2"],
-			"8"                : ["DP-2"]
+		"persistent_workspaces"    : {
+			"1"                    : ["HDMI-A-4"],
+			"2"                    : ["HDMI-A-4"],
+			"3"                    : ["HDMI-A-4"],
+			"4"                    : ["HDMI-A-4"],
+			"5"                    : ["DP-2"],
+			"6"                    : ["DP-2"],
+			"7"                    : ["DP-2"],
+			"8"                    : ["DP-2"]
 		}
 	},
 
@@ -62,8 +62,8 @@
 	"idle_inhibitor": {
 		"format"                   : "{icon}",
 		"format-icons": {
-			"activated"        : "",
-			"deactivated"      : ""
+			"activated"            : "",
+			"deactivated"          : ""
 		}
 	},
 
@@ -71,10 +71,22 @@
 		"spacing"                  : 5
 	},
 
+	"cpu": {
+		"interval"                 : 1,
+		"format"                   : " {max_frequency:0.2f}GHz | {usage}%",
+		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'htop') ]] && killall htop || kitty -e htop"
+	},
+
 	"clock": {
 		"tooltip-format"           : "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
 		"format"                   : "{:%a %d %b  %H:%M:%S}",
 		"interval"                 : 1
+	},
+
+	"memory": {
+		"interval"                 : 10,
+		"format"                   : " {used:0.2f} / {total:0.0f} GB",
+		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'htop') ]] && killall htop || kitty -e htop"
 	},
 
 	"network": {
@@ -95,13 +107,13 @@
 		"format-muted"             : "",
 		"format-source-muted"      : "",
 		"format-icons": {
-			"headphone"        : "",
-			"hands-free"       : "",
-			"headset"          : "",
-			"phone"            : "",
-			"portable"         : "",
-			"car"              : "",
-			"default"          : [" ", " ", " "]
+			"headphone"            : "",
+			"hands-free"           : "",
+			"headset"              : "",
+			"phone"                : "",
+			"portable"             : "",
+			"car"                  : "",
+			"default"              : [" ", " ", " "]
 		},
 		"scroll-step"              : 5,
 		"on-click"                 : "pactl set-sink-mute @DEFAULT_SINK@ toggle",
