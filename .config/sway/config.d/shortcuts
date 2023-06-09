@@ -82,7 +82,8 @@ bindsym $mod+q                                                  kill
 bindsym $mod+Return                                             exec $terminal
 bindsym $mod+d                                                  exec $menu
 bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
+bindsym $altMod+v                                               exec [[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r | wofi --show dmenu -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | tr '\n' ' ' | trans -brief :tr - | wl-copy
+bindsym $altMod+shift+v                                         exec rm -rf ~/.cache/clipboard_history
 bindsym $altMod+shift+d                                         exec grim -g "$(slurp)" - | tesseract - stdout -l eng+tur 2>/dev/null | wl-copy
 bindsym $altMod+shift+f                                         exec grim -g "$(slurp)" - | tesseract - stdout -l eng+tur 2>/dev/null | tr '\n' ' ' | trans -brief :tr - | wl-copy
 bindsym $altMod+space                                           exec swaymsg input "type:keyboard" xkb_switch_layout next
-

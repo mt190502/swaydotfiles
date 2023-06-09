@@ -16,7 +16,7 @@
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
 	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
-	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "custom/fan", "custom/space", "custom/clipboard", "custom/space", "sway/language", "custom/space", "idle_inhibitor", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "custom/fan", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
 
 
 
