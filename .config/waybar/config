@@ -15,7 +15,7 @@
 	//
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
-	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space" ],
+	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
 	"modules-right"  : [ "tray", "custom/space", "custom/fan", "custom/space", "custom/screenshot", "custom/space", "custom/translator", "custom/space", "custom/clipboard", "custom/space", "sway/language", "custom/space", "idle_inhibitor", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
 
 
@@ -160,5 +160,11 @@
 		"on-click"                 : "~/.config/sway/scripts.d/screenshot.sh",
 		"format"                   : "",
 		"tooltip"                  : false
-	}
+	},
+	"custom/weather": {
+		"format"                   : "{}",
+		"interval"                 : 3600,
+		"exec"                     : "curl -s 'https://wttr.in/Istanbul?format=1' | sed 's/  //g'",
+		"exec-if"                  : "ping wttr.in -c1"
+    },
 }
