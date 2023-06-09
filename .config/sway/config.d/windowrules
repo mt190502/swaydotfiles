@@ -13,6 +13,8 @@
 ####
 for_window [app_id="firefox" title="Library"]                   floating enable
 for_window [app_id="firefox" title="Picture-in-Picture"]        floating enable
+for_window [app_id="firefox" title="(.*)Sharing Indicator"]     floating enable
+for_window [app_id="firefox" title="(.*)Private Browsing"]      floating enable
 for_window [app_id="firefox"]                                   workspace 2; move container workspace 2
 
 
@@ -20,8 +22,8 @@ for_window [app_id="firefox"]                                   workspace 2; mov
 ## Workspace 3 ~ Text Editor and Terminal
 ####
 for_window [app_id="(?i)thunar"]                                workspace 3; floating enable; move container workspace 3
-for_window [app_id="org.kde.dolphin"]	                           workspace 3; floating enable; move container workspace 3
-for_window [app_id="org.kde.kate"]                              workspace 3; move container workspace 3
+for_window [app_id="org.kde.dolphin"]	                        workspace 3; floating enable; move container workspace 3
+#for_window [app_id="org.kde.kate"]                              workspace 3; move container workspace 3
 
 
 #####
