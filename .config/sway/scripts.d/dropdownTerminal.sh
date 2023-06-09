@@ -12,7 +12,6 @@ if [[ ! -n "$(ps aux | grep -v grep | grep -o dropterminal)" ]]; then
     sleep 0.15
 	kitty -T dropterminal &
 	sleep 0.15
-	swaymsg "scratchpad show, resize set 50ppt 50ppt, floating enable, move position $(( $(( $scrwidth * 25)) / 100 )) 0"
-else
-	swaymsg scratchpad show
 fi
+swaymsg "[app_id=\"kitty\" title=\"dropterminal\"] scratchpad show, resize set 50ppt 50ppt, floating enable, move position $(( $(( $scrwidth * 25)) / 100 )) 0"
+
