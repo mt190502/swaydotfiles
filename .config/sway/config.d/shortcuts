@@ -1,0 +1,88 @@
+#################################################
+##
+#### Shortcuts
+## 
+#################################################
+#~~~ focus
+bindsym $mod+Left                                              focus left
+bindsym $mod+Down                                              focus down
+bindsym $mod+Up                                                focus up
+bindsym $mod+Right                                             focus right
+
+#~~~ movement
+bindsym $mod+Shift+Left                                        move left
+bindsym $mod+Shift+Down                                        move down
+bindsym $mod+Shift+Up                                          move up
+bindsym $mod+Shift+Right                                       move right
+
+#~~~ window
+mode "resize" {
+    bindsym Right resize                                       shrink width 10 px or 10 ppt
+    bindsym Up resize                                          grow height 10 px or 10 ppt
+    bindsym Down resize                                        shrink height 10 px or 10 ppt
+    bindsym Left resize                                        grow width 10 px or 10 ppt
+    bindsym Return mode                                        "default"
+    bindsym Escape mode                                        "default"
+    bindsym $mod+r mode                                        "default"
+}
+bindsym $mod+r                                                  mode "resize"
+bindsym $mod+h                                                  split h
+bindsym $mod+v                                                  split v
+bindsym $mod+f                                                  fullscreen
+bindsym $mod+Shift+space                                        floating toggle
+#bindsym $mod+Tab                                               focus parent
+bindsym $mod+shift+1                                            move container to workspace $ws1
+bindsym $mod+shift+2                                            move container to workspace $ws2
+bindsym $mod+shift+3                                            move container to workspace $ws3
+bindsym $mod+shift+4                                            move container to workspace $ws4
+bindsym $altMod+shift+1                                         move container to workspace $ws5
+bindsym $altMod+shift+2                                         move container to workspace $ws6
+bindsym $altMod+shift+3                                         move container to workspace $ws7
+bindsym $altMod+shift+4                                         move container to workspace $ws8
+
+#~~~ workspace
+bindsym $mod+s                                                  layout stacking
+bindsym $mod+w                                                  layout tabbed
+bindsym $mod+e                                                  layout toggle split
+bindsym $mod+Tab                                                workspace next
+bindsym $mod+1                                                  workspace $ws1
+bindsym $mod+2                                                  workspace $ws2
+bindsym $mod+3                                                  workspace $ws3
+bindsym $mod+4                                                  workspace $ws4
+bindsym $altMod+1                                               workspace $ws5
+bindsym $altMod+2                                               workspace $ws6
+bindsym $altMod+3                                               workspace $ws7
+bindsym $altMod+4                                               workspace $ws8
+
+#~~~ sound
+bindsym XF86AudioRaiseVolume                                    exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume                                    exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute                                           exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#~~~ brightness (for Laptops)
+bindsym XF86MonBrightnessUp                                     exec $HOME/.config/sway/scripts.d/brightness.sh up
+bindsym XF86MonBrightnessDown                                   exec $HOME/.config/sway/scripts.d/brightness.sh down
+
+#~~~ screenshot
+bindsym $altMod+shift+s                                         exec $HOME/.config/sway/scripts.d/screenshot.sh -r
+bindsym ctrl+print                                              exec $HOME/.config/sway/scripts.d/screenshot.sh -a
+bindsym print                                                   exec $HOME/.config/sway/scripts.d/screenshot.sh -f
+
+#~~~ playerctl
+bindsym XF86AudioPlay                                           exec playerctl play-pause
+bindsym XF86AudioPause                                          exec playerctl play-pause
+bindsym XF86AudioNext                                           exec playerctl next
+bindsym XF86AudioPrev                                           exec playerctl previous
+
+#~~~ sway
+bindsym $mod+Shift+r                                            reload
+bindsym $mod+q                                                  kill
+
+#~~~ other
+bindsym $mod+Return                                             exec $terminal
+bindsym $mod+d                                                  exec $menu
+bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
+bindsym $altMod+shift+d                                         exec grim -g "$(slurp)" - | tesseract - stdout -l eng+tur 2>/dev/null | wl-copy
+bindsym $altMod+shift+f                                         exec grim -g "$(slurp)" - | tesseract - stdout -l eng+tur 2>/dev/null | tr '\n' ' ' | trans -brief :tr - | wl-copy
+bindsym $altMod+space                                           exec swaymsg input "type:keyboard" xkb_switch_layout next
+

@@ -1,0 +1,18 @@
+#################################################
+##
+#### Others
+##
+#################################################
+#~~~ gtk configuration
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec_always {
+    gsettings set $gnomeschema gtk-theme 'FlatColor'
+    gsettings set $gnomeschema icon-theme 'flattrcolor'
+    gsettings set $gnomeschema cursor-theme 'Adwaita'
+    gsettings set $gnomeschema font-name 'Ubuntu, Medium 10'
+}
+
+#~~~ startup apps
+exec_always --no-startup-id $HOME/.config/sway/scripts.d/starter.sh

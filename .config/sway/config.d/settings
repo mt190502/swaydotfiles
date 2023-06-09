@@ -1,0 +1,29 @@
+#################################################
+##
+#### Settings
+##
+#################################################
+#~~~ gaps
+gaps inner                                       5
+gaps outer                                       0
+default_border                                   pixel 5
+default_floating_border                          none
+floating_modifier                                $mod
+hide_edge_borders --i3                           none
+workspace_layout default
+
+#~~~ theme
+# class                 border         backgr         text         indicator      child_border
+client.focused          $activeColor   $activeColor   $color15     $activeColor   $activeColor
+client.unfocused        $inactiveColor $inactiveColor $color15     $inactiveColor $inactiveColor
+client.urgent           $urgentColor   $urgentColor   $color15     $urgentColor   $urgentColor
+client.background                      $activeColor
+
+output * bg                                      ~/.config/wpg/.current fill
+seat seat0 xcursor_theme                         Adwaita 16
+
+#~~~ sway
+bar {
+	swaybar_command                              waybar
+	workspace_buttons                            yes
+}

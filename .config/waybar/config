@@ -1,0 +1,164 @@
+{
+	/////////////////////////////////////////////////
+	//
+	//// Bar configuration
+	//
+	/////////////////////////////////////////////////
+	"height"  : 28,
+	"position": "top",
+
+
+
+	/////////////////////////////////////////////////
+	//
+	//// Modules
+	//
+	/////////////////////////////////////////////////
+	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
+	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "custom/fan", "custom/space", "custom/screenshot", "custom/space", "custom/translator", "custom/space", "custom/clipboard", "custom/space", "sway/language", "custom/space", "idle_inhibitor", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+
+
+
+	/////////////////////////////////////////////////
+	//
+	//// Module(s) configuration
+	//
+	/////////////////////////////////////////////////
+	"sway/workspaces": {
+		"format"                   : "{}",
+		"format-icons": {
+                        "focused"          : "",
+			"default"          : ""
+		},
+		"persistent_workspaces": {
+			"1"                : ["HDMI-A-4"],
+			"2"                : ["HDMI-A-4"],
+			"3"                : ["HDMI-A-4"],
+			"4"                : ["HDMI-A-4"],
+			"5"                : ["DP-2"],
+			"6"                : ["DP-2"],
+			"7"                : ["DP-2"],
+			"8"                : ["DP-2"]
+		}
+	},
+
+	"sway/mode": {
+		"format"                   : "<span style=\"italic\">{}</span>",
+		"tooltip"                  : false
+	},
+
+	"sway/language": {
+		"format"                   : "{short} {variant}",
+		"on-click"                 : "swaymsg input \"type:keyboard\" xkb_switch_layout next"
+	},
+
+	"sway/window": {
+		"format"                   : "{}",
+		"max-length"               : 50,
+		"tooltip"                  : false
+	},
+
+	"idle_inhibitor": {
+		"format"                   : "{icon}",
+		"format-icons": {
+			"activated"        : "",
+			"deactivated"      : ""
+		}
+	},
+
+	"tray": {
+		"spacing"                  : 5
+	},
+
+	"clock": {
+		"tooltip-format"           : "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format"                   : "{:%a %d %b  %H:%M:%S}",
+		"interval"                 : 1
+	},
+
+	"network": {
+		"tooltip"                  : false,
+		"format-wifi"              : "",
+		"format-ethernet"          : "  {ifname}",
+		"format-linked"            : "  {ifname} (No IP)",
+		"format-disconnected"      : "⚠  Disconnected",
+		"format-alt"               : " [ {essid} ]",
+		"on-click-right"           : "kitty -T nmtui -e $HOME/.local/bin/nmtui"
+	},
+
+	"pulseaudio": {
+		"tooltip"                  : false,
+		"format"                   : "{icon} {volume}%",
+//		"format-bluetooth"         : "{icon}  {volume}%",
+//		"format-bluetooth-muted"   : "{icon}  ",
+		"format-muted"             : "",
+		"format-source-muted"      : "",
+		"format-icons": {
+			"headphone"        : "",
+			"hands-free"       : "",
+			"headset"          : "",
+			"phone"            : "",
+			"portable"         : "",
+			"car"              : "",
+			"default"          : [" ", " ", " "]
+		},
+		"scroll-step"              : 5,
+		"on-click"                 : "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right"           : "pavucontrol",
+		"on-scroll-up"             : "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+		"on-scroll-down"           : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+	},
+	"bluetooth": {
+		"format"                   : "",
+		"format-connected"         : "",
+		"format-connected-battery" : " {icon} {device_battery_percentage}%",
+		"format-icons"             : ["", "", "", "", ""]
+	},
+
+
+
+	///////////////////////////////////////////////////
+	//
+	//// Other module(s)
+	//
+	///////////////////////////////////////////////////
+	"custom/space": {
+		"format"                   : "  ",
+		"tooltip"                  : false,
+	},
+
+	"custom/fan": {
+		"exec"                     : "cat $(find /sys/devices/platform -iname '*fan1_input' 2>/dev/null)",
+		"format"                   : "  {} RPM",
+		"tooltip"                  : false,
+		"interval"                 : 1
+	},
+
+	"custom/clipboard": {
+		"format"                   : "",
+		"tooltip"                  : false,
+		"interval"                 : "once",
+		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r | wofi --show dmenu -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | wl-copy",
+		"on-click-middle"          : "rm -rf ~/.cache/clipboard_history",
+	},
+
+	"custom/translator": {
+		"format"                   : "",
+		"tooltip"                  : false,
+		"interval"                 : "once",
+		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r | wofi --show dmenu -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | tr '\n' ' ' | trans -brief :tr - | wl-copy",
+	},
+
+	"custom/powermenu": {
+		"on-click"                 : "~/.config/sway/scripts.d/powermenu.sh",
+		"format"                   : "",
+		"tooltip"                  : false
+	},
+
+	"custom/screenshot": {
+		"on-click"                 : "~/.config/sway/scripts.d/screenshot.sh",
+		"format"                   : "",
+		"tooltip"                  : false
+	}
+}

@@ -1,0 +1,55 @@
+@define-color activeColor   #c37534;
+@define-color inactiveColor #865024;
+@define-color urgentColor   #FF0000;
+@define-color color00       #0D161F;
+@define-color color01       #305D46;
+@define-color color02       #B32D35;
+@define-color color03       #F11624;
+@define-color color04       #FA6341;
+@define-color color05       #27A85F;
+@define-color color06       #F59341;
+@define-color color07       #88edc3;
+@define-color color08       #5fa588;
+@define-color color09       #305D46;
+@define-color color10       #B32D35;
+@define-color color11       #F11624;
+@define-color color12       #FA6341;
+@define-color color13       #27A85F;
+@define-color color14       #F59341;
+@define-color color15       #88edc3;
+
+* {
+	border-radius: 5px;
+	font-family: Ubuntu Medium, FontAwesome5Brands, FontAwesome5Free, Arial, sans-serif;
+	font-size: 13px;
+	min-height: 0;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+window#waybar.empty #window {
+	background-color: transparent;
+}
+
+#tray,
+#workspaces,
+widget label:not(#custom-space) {
+	background-color: @inactiveColor;
+	color: @color15;
+	margin: 6px 0px 2px 0px;
+	padding: 0px 10px 0px 10px;
+}
+
+#workspaces button,
+#workspaces button label {
+	background-color: @inactiveColor;
+	color: @color15;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 1px 0px 1px;
+}
+
+box.horizontal #tray widget window menu menuitem * {
+	background-color: transparent;
+}

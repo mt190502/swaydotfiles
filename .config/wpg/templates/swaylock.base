@@ -1,0 +1,63 @@
+#################################################
+##
+#### SwayLock
+##
+#################################################
+#~~~ #~~~ caps lock text ~~~# ~~~#
+#disable-caps-lock-text
+indicator-caps-lock
+
+
+#~~~ #~~~ fonts ~~~# ~~~#
+font=Ubuntu Medium
+font-size=20
+
+
+#~~~ #~~~ indicator ~~~# ~~~#
+#~~~ settings
+#indicator-idle-visible           #~~~ always show indicator
+indicator-radius=100
+indicator-thickness=20
+#line-uses-inside
+#line-uses-ring
+#no-unlock-indicator              #~~~ hide indicator
+
+bs-hl-color={active}
+caps-lock-bs-hl-color={active}
+caps-lock-key-hl-color={active}
+key-hl-color={active}
+
+layout-bg-color={color0}
+layout-border-color={active}
+#layout-text-color={color15}
+
+separator-color={color0}
+
+inside-color={color0}00
+line-color={color0}
+ring-color={color8}
+text-color={color15}
+
+inside-clear-color={color0}00
+line-clear-color={color0}
+ring-clear-color={color8}
+text-clear-color={color15}
+
+inside-caps-lock-color={color0}00
+line-caps-lock-color={color0}
+ring-caps-lock-color={color8}
+text-caps-lock-color={color15}
+
+inside-ver-color={color0}00
+line-ver-color={color0}
+ring-ver-color={color8}
+text-ver-color={color15}
+
+inside-wrong-color={color0}00
+line-wrong-color={color0}
+ring-wrong-color=#FF0000
+text-wrong-color=#FF0000
+
+#~~~ keyboard layout config
+#show-keyboard-layout
+hide-keyboard-layout

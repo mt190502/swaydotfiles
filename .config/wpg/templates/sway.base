@@ -1,0 +1,24 @@
+#################################################
+##
+#### Colors
+##
+#################################################
+set $activeColor   {active}
+set $inactiveColor {inactive}
+set $urgentColor   #FF0000
+set $color00       {color0}
+set $color01       {color1}
+set $color02       {color2}
+set $color03       {color3}
+set $color04       {color4}
+set $color05       {color5}
+set $color06       {color6}
+set $color07       {color7}
+set $color08       {color8}
+set $color09       {color9}
+set $color10       {color10}
+set $color11       {color11}
+set $color12       {color12}
+set $color13       {color13}
+set $color14       {color14}
+set $color15       {color15}

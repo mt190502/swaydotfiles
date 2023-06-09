@@ -1,0 +1,15 @@
+sort=-time
+layer=overlay
+background-color=#0D161F
+border-size=5
+border-color=#c37534
+border-radius=0
+margin=16
+max-icon-size=64
+default-timeout=10000
+ignore-timeout=1
+font=Ubuntu Medium 10
+
+[urgency=high]
+border-color=#FF0000
+default-timeout=0

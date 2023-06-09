@@ -1,0 +1,29 @@
+#inner-box,
+#outer-box,
+#input,
+#text {
+	margin: 5px;
+	background-color: #0D161F;
+}
+
+#window {
+	border: 4px solid #c37534;
+	border-radius: 5px;
+	color: #88edc3;
+}
+
+#input {
+	border: none;
+	border-bottom: 2px solid #c37534;
+}
+
+#text {
+	color: #88edc3;
+	font-size: 16px;
+}
+
+#entry:selected,
+#img:selected,
+#text:selected {
+	background-color: #865024;
+}

@@ -1,0 +1,7 @@
+pushgithub.sh
+version.txt
+
+**/.idea
+
+.config/wpg/samples
+.config/wpg/schemes
