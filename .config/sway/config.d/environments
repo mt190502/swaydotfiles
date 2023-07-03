@@ -9,7 +9,7 @@ set $browser       flatpak run org.mozilla.firefox
 set $imageviewer   flatpak run org.kde.gwenview
 set $filemanager   dolphin
 set $mediaplayer   flatpak run org.videolan.vlc
-set $menu          wofi --show drun
+set $menu          wofi --prompt "Search Apps" --show drun
 set $terminal      kitty
 
 #~~~ system

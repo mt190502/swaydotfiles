@@ -22,39 +22,39 @@ indicator-thickness=20
 #line-uses-ring
 #no-unlock-indicator              #~~~ hide indicator
 
-bs-hl-color=#01629b
-caps-lock-bs-hl-color=#01629b
-caps-lock-key-hl-color=#01629b
-key-hl-color=#01629b
+bs-hl-color=#b87b48
+caps-lock-bs-hl-color=#b87b48
+caps-lock-key-hl-color=#b87b48
+key-hl-color=#b87b48
 
-layout-bg-color=#080F37
-layout-border-color=#01629b
-#layout-text-color=#afbbcc
+layout-bg-color=#07171C
+layout-border-color=#b87b48
+#layout-text-color=#fff6e5
 
-separator-color=#080F37
+separator-color=#07171C
 
-inside-color=#080F3700
-line-color=#080F37
-ring-color=#7a828e
-text-color=#afbbcc
+inside-color=#07171C00
+line-color=#07171C
+ring-color=#103844
+text-color=#fff6e5
 
-inside-clear-color=#080F3700
-line-clear-color=#080F37
-ring-clear-color=#7a828e
-text-clear-color=#afbbcc
+inside-clear-color=#07171C00
+line-clear-color=#07171C
+ring-clear-color=#103844
+text-clear-color=#fff6e5
 
-inside-caps-lock-color=#080F3700
-line-caps-lock-color=#080F37
-ring-caps-lock-color=#7a828e
-text-caps-lock-color=#afbbcc
+inside-caps-lock-color=#07171C00
+line-caps-lock-color=#07171C
+ring-caps-lock-color=#103844
+text-caps-lock-color=#fff6e5
 
-inside-ver-color=#080F3700
-line-ver-color=#080F37
-ring-ver-color=#7a828e
-text-ver-color=#afbbcc
+inside-ver-color=#07171C00
+line-ver-color=#07171C
+ring-ver-color=#103844
+text-ver-color=#fff6e5
 
-inside-wrong-color=#080F3700
-line-wrong-color=#080F37
+inside-wrong-color=#07171C00
+line-wrong-color=#07171C
 ring-wrong-color=#FF0000
 text-wrong-color=#FF0000
 

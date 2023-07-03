@@ -1,8 +1,9 @@
-mode=drun
-insenstive=true
 allow_images=true
+height=40%
+insenstive=true
+key_expand=Tab
+line_wrap=word_char
+mode=dmenu
+no_actions=true
 term=kitty
 width=40%
-height=40%
-key_expand=Tab
-no_actions=true

@@ -15,6 +15,7 @@ for_window [app_id="firefox" title="Library"]                   floating enable
 for_window [app_id="firefox" title="Picture-in-Picture"]        floating enable
 for_window [app_id="firefox" title="(.*)Sharing Indicator"]     floating enable
 for_window [app_id="firefox" title="(.*)Private Browsing"]      floating enable
+for_window [app_id="firefox" title="Extension: (.*)"]           floating enable
 for_window [app_id="firefox"]                                   workspace 2; move container workspace 2
 
 
@@ -22,7 +23,7 @@ for_window [app_id="firefox"]                                   workspace 2; mov
 ## Workspace 3 ~ Text Editor and Terminal
 ####
 for_window [app_id="(?i)thunar"]                                workspace 3; floating enable; move container workspace 3
-for_window [app_id="org.kde.dolphin"]	                        workspace 3; floating enable; move container workspace 3
+for_window [app_id="org.kde.dolphin"]	                        floating enable
 #for_window [app_id="org.kde.kate"]                              workspace 3; move container workspace 3
 
 
@@ -71,6 +72,7 @@ for_window [class="obsidian"]                                   workspace 8; mov
 ####
 for_window [app_id="com.usebottles.bottles"]                    floating enable
 for_window [app_id="gnome-calculator"]                          floating enable
+for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
 for_window [app_id="nm-connection-editor$"]                     floating enable
 for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]   floating enable
 for_window [app_id="org.kde.discover"]                          floating enable
@@ -81,6 +83,7 @@ for_window [app_id="pavucontrol"]                               floating enable
 for_window [app_id="setroubleshoot"]                            floating enable
 for_window [app_id="simple-scan"]                               floating enable
 for_window [app_id="tlp-ui"]                                    floating enable
+for_window [app_id="Waydroid"]                                  floating enable
 for_window [app_id="zoom"]                                      floating enable
 for_window [class="jetbrains-(.*)" title="Welcome to (.*)"]     floating enable
 for_window [class="jetbrains-(.*)" title="splash"]              floating enable

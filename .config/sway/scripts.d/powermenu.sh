@@ -4,6 +4,9 @@
 #### PowerMenu
 ##
 #################################################
+#~~~ variables
+WAYLAND_DISPLAY=wayland-1
+
 #~~~ checks
 [[ "$(ps aux | grep -v grep | grep -io "/bin/bash /home/.*/.config/sway/scripts.d/powermenu.sh" | wc -l)" -gt "2" ]] && killall swaynag && exit
 
