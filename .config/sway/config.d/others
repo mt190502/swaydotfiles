@@ -15,4 +15,4 @@ exec_always {
 }
 
 #~~~ startup apps
-exec_always --no-startup-id $HOME/.config/sway/scripts.d/starter.sh
+exec $HOME/.config/sway/scripts.d/starter.sh

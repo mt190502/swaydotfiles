@@ -14,8 +14,8 @@ set $terminal      kitty
 
 #~~~ system
 set $gnome-schema  org.gnome.desktop.interface
-set $scr1          HDMI-A-4
-set $scr2          DP-2
+set $scr1          SCREEN1
+set $scr2          SCREEN2
 
 #~~~ workspace
 set $ws1           "1"

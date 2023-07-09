@@ -32,14 +32,14 @@
 			"default"              : ""
 		},
 		"persistent_workspaces"    : {
-			"1"                    : ["HDMI-A-4"],
-			"2"                    : ["HDMI-A-4"],
-			"3"                    : ["HDMI-A-4"],
-			"4"                    : ["HDMI-A-4"],
-			"5"                    : ["DP-2"],
-			"6"                    : ["DP-2"],
-			"7"                    : ["DP-2"],
-			"8"                    : ["DP-2"]
+			"1"                    : ["SCREEN1"],
+			"2"                    : ["SCREEN1"],
+			"3"                    : ["SCREEN1"],
+			"4"                    : ["SCREEN1"],
+			"5"                    : ["SCREEN2"],
+			"6"                    : ["SCREEN2"],
+			"7"                    : ["SCREEN2"],
+			"8"                    : ["SCREEN2"]
 		}
 	},
 

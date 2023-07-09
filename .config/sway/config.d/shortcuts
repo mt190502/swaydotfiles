@@ -91,7 +91,7 @@ bindsym $altMod+l                                               exec wtype -P ri
 #~~~ other
 bindsym $mod+Return                                             exec $terminal
 bindsym $mod+d                                                  exec $menu
-bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/wofi-emoji
+bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/wofi-emoji.sh
 bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
 bindsym $altMod+v                                               exec [[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r 100 | wofi --show dmenu --prompt "Clipboard" -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | wl-copy
 bindsym $altMod+shift+v                                         exec rm -rf ~/.cache/clipboard_history

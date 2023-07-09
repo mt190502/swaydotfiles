@@ -1,9 +1,4 @@
-installer.sh
 pushgithub.sh
-version.txt
 
 **/.idea
 logs/*
-
-.config/wpg/samples
-.config/wpg/schemes

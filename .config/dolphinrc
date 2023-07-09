@@ -4,17 +4,18 @@ MenuBar=Disabled
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
 [Colors:View]
-BackgroundAlternate=#103844
-BackgroundNormal=#07171C
-ForegroundActive=#103844
-ForegroundInactive=#D8684E
-ForegroundNormal=#fff6e5
+BackgroundAlternate=#2e2a15
+BackgroundNormal=#0c0b06
+ForegroundActive=#2e2a15
+ForegroundInactive=#5867C5
+ForegroundNormal=#f3f1ff
 
 [ContextMenu]
 ShowAddToPlaces=false
 ShowViewMode=false
 
 [General]
+ConfirmClosingMultipleTabs=false
 RememberOpenedTabs=false
 Version=202
 ViewPropsTimestamp=2023,6,21,11,55,45.881
@@ -22,10 +23,6 @@ ViewPropsTimestamp=2023,6,21,11,55,45.881
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
-
-[KPropertiesDialog]
-2 screens: Height=451
-2 screens: Width=418
 
 [MainWindow]
 MenuBar=Disabled
