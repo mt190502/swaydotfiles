@@ -16,7 +16,7 @@
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
 	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
-	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "custom/fan", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "custom/fan", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "battery", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
 
 
 
@@ -32,14 +32,14 @@
 			"default"              : ""
 		},
 		"persistent_workspaces"    : {
-			"1"                    : ["SCREEN1"],
-			"2"                    : ["SCREEN1"],
-			"3"                    : ["SCREEN1"],
-			"4"                    : ["SCREEN1"],
-			"5"                    : ["SCREEN2"],
-			"6"                    : ["SCREEN2"],
-			"7"                    : ["SCREEN2"],
-			"8"                    : ["SCREEN2"]
+			"1"                    : ["eDP-1"],
+			"2"                    : ["eDP-1"],
+			"3"                    : ["eDP-1"],
+			"4"                    : ["eDP-1"],
+			"5"                    : ["DP-1"],
+			"6"                    : ["DP-1"],
+			"7"                    : ["DP-1"],
+			"8"                    : ["DP-1"]
 		}
 	},
 
@@ -82,7 +82,7 @@
 	"cpu": {
 		"interval"                 : 1,
 		"format"                   : " {max_frequency:0.2f}GHz | {usage}%",
-		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'htop') ]] && killall htop || kitty -e htop"
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -e htop"
 	},
 
 	"clock": {
@@ -94,7 +94,7 @@
 	"memory": {
 		"interval"                 : 10,
 		"format"                   : " {used:0.2f} / {total:0.0f} GB",
-		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'htop') ]] && killall htop || kitty -e htop"
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -e htop"
 	},
 
 	"network": {
@@ -104,7 +104,7 @@
 		"format-linked"            : " (No IP)",
 		"format-disconnected"      : "⚠  Disconnected",
 		"format-alt"               : "{essid} {ipaddr}/{cidr} ",
-		"on-click-right"           : "kitty -T nmtui -e nmtui"
+		"on-click-right"           : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -T nmtui -e nmtui"
 	},
 
 	"pulseaudio": {
@@ -130,10 +130,23 @@
 		"on-scroll-up"             : "pactl set-sink-volume @DEFAULT_SINK@ +5%",
 		"on-scroll-down"           : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 	},
+
+	"battery": {
+		//"bat"                      : "BAT2",
+		"interval"                 : 60,
+		"states": {
+			"warning"              : 30,
+			"critical"             : 15
+		},
+		"format"                   : "{icon} {capacity}%",
+		"format-icons"             : ["", "", "", "", ""],
+		"max-length"               : 25
+	},
+
 	"bluetooth": {
 		"format"                   : "",
 		"format-connected"         : "",
-		"format-connected-battery" : "{icon} {device_battery_percentage}%",
+		"format-connected-battery" : " {icon} {device_battery_percentage}%",
 		"format-icons"             : ["", "", "", "", ""]
 	},
 
@@ -156,23 +169,8 @@
 		"interval"                 : 1
 	},
 
-	"custom/clipboard": {
-		"format"                   : "",
-		"tooltip"                  : false,
-		"interval"                 : "once",
-		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r | wofi --show dmenu -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | wl-copy",
-		"on-click-middle"          : "rm -rf ~/.cache/clipboard_history",
-	},
-
-	"custom/translator": {
-		"format"                   : "",
-		"tooltip"                  : false,
-		"interval"                 : "once",
-		"on-click"                 : "[[ -n $(ps aux | grep -v grep | grep -Ei 'wofi') ]] && killall wofi || python3 ~/.config/sway/scripts.d/clipboard.py -r 100 | wofi --show dmenu -k /dev/null | cut -d ':' -f1 | xargs python3 ~/.config/sway/scripts.d/clipboard.py -s | tr '\n' ' ' | trans -brief :tr - | wl-copy",
-	},
-
 	"custom/powermenu": {
-		"on-click"                 : "~/.config/sway/scripts.d/powermenu.sh",
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/powermenu.sh",
 		"format"                   : "",
 		"tooltip"                  : false
 	},
@@ -186,6 +184,7 @@
 		"format"                   : "{}",
 		"interval"                 : 3600,
 		"exec"                     : "curl -s 'https://wttr.in/Istanbul?format=1' | sed 's/ //1'",
-		"exec-if"                  : "ping wttr.in -c1"
+		"exec-if"                  : "ping wttr.in -c1",
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -T wttr.in --hold sh -c 'curl https://wttr.in/Istanbul'"
     },
 }

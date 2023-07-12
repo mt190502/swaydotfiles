@@ -1,8 +1,8 @@
 #!/bin/bash
 if [ $? -eq 0 ]; then
-    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i | cut -d ' ' -f 1 | tr -d '\n' | wtype -
+    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu --prompt "Search Emoji" -i | cut -d ' ' -f 1 | tr -d '\n' | wtype -
 else
-    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
+    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu --prompt "Search Emoji" -i | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 fi
 exit
 ### DATA ###

@@ -15,12 +15,12 @@ startprocess() {
 
 #~~~ processes
 startprocess /usr/bin/gnome-keyring-daemon --start --foreground --components=pkcs11,secrets,ssh                                                                            &
-startprocess /usr/libexec/kdeconnectd                                                                                                                                      &
-startprocess /usr/libexec/packagekitd                                                                                                                                      &
+startprocess /usr/lib/kdeconnectd                                                                                                                                          &
+#startprocess /usr/libexec/packagekitd                                                                                                                                      &
 startprocess /usr/bin/mako                                                                                                                                                 &
 startprocess /usr/bin/easyeffects --gapplication-service                                                                                                                   &
-startprocess /usr/bin/seapplet                                                                                                                                             &
-startprocess /usr/sbin/rfkill block wlan                                                                                                                                   &
+#startprocess /usr/bin/seapplet                                                                                                                                             &
+#startprocess /usr/sbin/rfkill block wlan                                                                                                                                   &
 startprocess /usr/bin/wl-paste -w python3 ~/.config/sway/scripts.d/clipboard.py -w                                                                                         &
 startprocess /usr/bin/swayidle -w timeout 120 "~/.config/sway/scripts.d/powermenu.sh --lock" timeout 140 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &
 
@@ -28,6 +28,10 @@ if [[ -e /usr/libexec/kf5/polkit-kde-authentication-agent-1 ]]; then
 	XDG_CURRENT_DESKTOP=kde startprocess /usr/libexec/kf5/polkit-kde-authentication-agent-1 &
 elif [[ -e /usr/lib/kf5/polkit-kde-authentication-agent-1 ]]; then
 	XDG_CURRENT_DESKTOP=kde startprocess /usr/lib/kf5/polkit-kde-authentication-agent-1 &
+elif [[ -e /usr/lib/polkit-kde-authentication-agent-1 ]]; then
+	XDG_CURRENT_DESKTOP=kde startprocess /usr/lib/polkit-kde-authentication-agent-1 &
+elif [[ -e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 ]]; then
+	/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fi
 
 if [[ -e /usr/libexec/xdg-desktop-portal ]]; then

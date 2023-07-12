@@ -6,7 +6,8 @@
 #################################################
 ocrdata=$(mktemp)
 
-grim -g "$(slurp)" - | tesseract - stdout -l eng+tur --psm 6 2>/dev/null | sed -E -e '/^[[:space:]]*$/b' -e ':a;N;$!ba;s/([^[:space:]])\n/\1 /g' | sed 's/\n//g' > $ocrdata
+grim -g "$(slurp)" - > $ocrdata
+cat $ocrdata | tesseract - stdout -l eng+tur --psm 6 2>/dev/null | sed -E -e '/^[[:space:]]*$/b' -e ':a;N;$!ba;s/([^[:space:]])\n/\1 /g' | sed 's/\n//g' > $ocrdata
 [[ ! -s $ocrdata ]] && exit
 
 case $@ in

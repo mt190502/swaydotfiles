@@ -16,7 +16,7 @@ for_window [app_id="firefox" title="Picture-in-Picture"]        floating enable
 for_window [app_id="firefox" title="(.*)Sharing Indicator"]     floating enable
 for_window [app_id="firefox" title="(.*)Private Browsing"]      floating enable
 for_window [app_id="firefox" title="Extension: (.*)"]           floating enable
-for_window [app_id="firefox"]                                   workspace 2; move container workspace 2
+#for_window [app_id="firefox"]                                   workspace 2; move container workspace 2
 
 
 #####
@@ -55,16 +55,16 @@ for_window [app_id="SoundWireServer"]                           workspace 7; flo
 for_window [app_id="firetools"]                                 workspace 7; floating enable; move container workspace 7
 for_window [app_id="firewall-config"]                           workspace 7; floating enable; move container workspace 7
 for_window [app_id="gnome-control-center"]                      workspace 7; floating enable; move container workspace 7
-for_window [app_id="qt5ct"]                                     workspace 7; floating enable; move container workspace 7
+#for_window [app_id="qt5ct"]                                     workspace 7; floating enable; move container workspace 7
 for_window [app_id="system-config-printer"]                     workspace 7; floating enable; move container workspace 7
-for_window [app_id="wpg"]                                       workspace 7; floating enable; move container workspace 7
-for_window [class="(?i)Lxappearance$"]                          workspace 7; floating enable; move container workspace 7
+#for_window [app_id="wpg"]                                       workspace 7; floating enable; move container workspace 7
+#for_window [class="(?i)Lxappearance$"]                          workspace 7; floating enable; move container workspace 7
 
 
 #####
 ## Workspace 8
 ####
-for_window [class="obsidian"]                                   workspace 8; move container workspace 8
+#for_window [class="obsidian"]                                   workspace 8; move container workspace 8
 
 
 #####
@@ -73,6 +73,8 @@ for_window [class="obsidian"]                                   workspace 8; mov
 for_window [app_id="com.usebottles.bottles"]                    floating enable
 for_window [app_id="gnome-calculator"]                          floating enable
 for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
+for_window [app_id="kitty" title="wttr.in"]                     floating enable
+for_window [app_id="kitty" title="nmtui"]                       floating enable
 for_window [app_id="nm-connection-editor$"]                     floating enable
 for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]   floating enable
 for_window [app_id="org.kde.discover"]                          floating enable

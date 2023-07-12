@@ -7,15 +7,12 @@
 #~~~ variables
 WAYLAND_DISPLAY=wayland-1
 
-#~~~ checks
-[[ "$(ps aux | grep -v grep | grep -io "/bin/bash /home/.*/.config/sway/scripts.d/powermenu.sh" | wc -l)" -gt "2" ]] && killall swaynag && exit
-
 #~~~ lock function
 blurlock() {
     [[ -n "$(ps aux | grep -v grep | grep swaylock)" ]] && exit
     for output in $(swaymsg -t get_outputs | jq -r '.[].name'); do
         image=/tmp/$output-lock
-	[[ -e $image ]] && rm $image
+		[[ -e $image ]] && rm $image
         grim -o $output $image.png
         convert -blur 0x10 $image.png $image-blurred.png
         args="$args --image $output:$image-blurred.png"

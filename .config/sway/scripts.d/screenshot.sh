@@ -11,8 +11,6 @@ _date=$(date +%Y%m%d_%H%M%S)
 
 #~~~ checks
 [[ ! -d $imageDirectory ]] && mkdir -p $imageDirectory
-[[ -n "$(ps aux | grep -v grep | grep -ioE 'swappy|imv-wayland|grim|slurp')" ]] && killall swappy imv-wayland grim slurp
-[[ -n "$(ps aux | grep -v grep | grep -Ei '/bin/bash /home/.*/.config/sway/scripts.d/screenshot.sh')" ]] && killall swaynag && exit
 
 #~~~ take screenshot before process
 takeInitialSS() {
