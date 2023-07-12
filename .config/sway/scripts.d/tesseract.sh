@@ -5,9 +5,10 @@
 ##
 #################################################
 ocrdata=$(mktemp)
+tmpdata=$(mktemp)
 
-grim -g "$(slurp)" - > $ocrdata
-cat $ocrdata | tesseract - stdout -l eng+tur --psm 6 2>/dev/null | sed -E -e '/^[[:space:]]*$/b' -e ':a;N;$!ba;s/([^[:space:]])\n/\1 /g' | sed 's/\n//g' > $ocrdata
+grim -g "$(slurp)" - > $tmpdata
+cat $tmpdata | tesseract - stdout -l eng+tur --psm 6 2>/dev/null | sed -E -e '/^[[:space:]]*$/b' -e ':a;N;$!ba;s/([^[:space:]])\n/\1 /g' | sed 's/\n//g' > $ocrdata
 [[ ! -s $ocrdata ]] && exit
 
 case $@ in
@@ -20,5 +21,4 @@ case $@ in
 esac
 
 [[ -n "$out" ]] && echo $out | wl-copy
-rm $ocrdata
-
+rm $ocrdata $tmpdata
