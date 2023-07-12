@@ -6,6 +6,7 @@
 scriptencoding=utf-8
 :set autoindent
 :set background=dark
+":set clipboard+=unnamedplus
 :set encoding=utf-8
 :set mouse=a
 :set number
