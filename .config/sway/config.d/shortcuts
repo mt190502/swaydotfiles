@@ -60,8 +60,8 @@ bindsym XF86AudioLowerVolume                                    exec pactl set-s
 bindsym XF86AudioMute                                           exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 #~~~ brightness (for Laptops)
-bindsym XF86MonBrightnessUp                                     exec $HOME/.config/sway/scripts.d/brightness.sh up
-bindsym XF86MonBrightnessDown                                   exec $HOME/.config/sway/scripts.d/brightness.sh down
+bindsym XF86MonBrightnessUp                                     exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown                                   exec brightnessctl set 5%-
 
 #~~~ screenshot
 bindsym $altMod+shift+s                                         exec $HOME/.config/sway/scripts.d/screenshot.sh -r
