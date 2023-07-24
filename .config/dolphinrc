@@ -3,19 +3,11 @@ MenuBar=Disabled
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
-[Colors:View]
-BackgroundAlternate=#2e2a15
-BackgroundNormal=#0c0b06
-ForegroundActive=#2e2a15
-ForegroundInactive=#5867C5
-ForegroundNormal=#f3f1ff
-
 [ContextMenu]
 ShowAddToPlaces=false
 ShowViewMode=false
 
 [General]
-ConfirmClosingMultipleTabs=false
 RememberOpenedTabs=false
 Version=202
 ViewPropsTimestamp=2023,6,21,11,55,45.881
@@ -33,3 +25,12 @@ ToolButtonStyle=IconOnly
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
+
+[Colors:View]
+BackgroundAlternate=#1a1c35
+BackgroundNormal=#0A0B14
+ForegroundActive=#1a1c35
+ForegroundNormal=#c7ffff
+ForegroundInactive=#2C82BB
+
+
