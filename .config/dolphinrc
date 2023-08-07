@@ -3,6 +3,13 @@ MenuBar=Disabled
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
 
+[Colors:View]
+BackgroundAlternate=#1a1c35
+BackgroundNormal=#0A0B14
+ForegroundActive=#1a1c35
+ForegroundInactive=#2C82BB
+ForegroundNormal=#c7ffff
+
 [ContextMenu]
 ShowAddToPlaces=false
 ShowViewMode=false
@@ -16,6 +23,10 @@ ViewPropsTimestamp=2023,6,21,11,55,45.881
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
+[KPropertiesDialog]
+2 screens: Height=451
+2 screens: Width=419
+
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
@@ -25,12 +36,3 @@ ToolButtonStyle=IconOnly
 
 [PreviewSettings]
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
-
-[Colors:View]
-BackgroundAlternate=#1a1c35
-BackgroundNormal=#0A0B14
-ForegroundActive=#1a1c35
-ForegroundNormal=#c7ffff
-ForegroundInactive=#2C82BB
-
-

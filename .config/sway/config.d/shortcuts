@@ -93,7 +93,7 @@ bindsym $mod+Return                                             exec $terminal
 bindsym $mod+d                                                  exec $HOME/.config/sway/scripts.d/programtoggle.sh $menu
 bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/wofi-emoji.sh
 bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
-bindsym $altMod+v                                               exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/openclipboard.sh
-bindsym $altMod+shift+v                                         exec rm -rf ~/.cache/clipboard_history
+bindsym $altMod+v                                               exec $HOME/scripts/cliphist list | wofi --show dmenu -k /dev/null | $HOME/scripts/cliphist decode | wl-copy
+bindsym $altMod+shift+v                                         exec $HOME/scripts/cliphist wipe
 bindsym $altMod+shift+d                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -e 
 bindsym $altMod+shift+f                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t 

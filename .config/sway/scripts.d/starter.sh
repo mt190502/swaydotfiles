@@ -14,15 +14,20 @@ startprocess() {
 }
 
 #~~~ processes
-startprocess /usr/lib/kdeconnectd                                                                                                                                          &
+startprocess /usr/libexec/kdeconnectd                                                                                                                                      &
 startprocess /usr/libexec/packagekitd                                                                                                                                      &
 startprocess /usr/bin/mako                                                                                                                                                 &
 startprocess /usr/bin/easyeffects --gapplication-service                                                                                                                   &
-sleep 3 && startprocess /usr/bin/nextcloud                                                                                                                                 &
 startprocess /usr/bin/seapplet                                                                                                                                             &
 startprocess /usr/sbin/rfkill block wlan                                                                                                                                   &
-startprocess /usr/bin/wl-paste -w python3 ~/.config/sway/scripts.d/clipboard.py -w                                                                                         &
+#startprocess /usr/bin/wl-paste -w python3 ~/.config/sway/scripts.d/clipboard.py -w                                                                                         &
+startprocess /usr/bin/wl-paste -w $HOME/scripts/cliphist store                                                                                                             &
 startprocess /usr/bin/swayidle -w timeout 120 "~/.config/sway/scripts.d/powermenu.sh --lock" timeout 140 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &
+
+sleep 3 && startprocess /usr/bin/nextcloud                                                                                                                                 &
+
+
+
 
 if [[ -e /usr/libexec/kf5/polkit-kde-authentication-agent-1 ]]; then
 	XDG_CURRENT_DESKTOP=kde startprocess /usr/libexec/kf5/polkit-kde-authentication-agent-1 &
