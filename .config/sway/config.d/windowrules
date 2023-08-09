@@ -71,7 +71,6 @@ for_window [app_id="system-config-printer"]                     workspace 7; flo
 ## Other
 ####
 for_window [app_id="com.usebottles.bottles"]                    floating enable
-for_window [app_id="com.nextcloud.desktopclient.nextcloud"]     floating enable
 for_window [app_id="gnome-calculator"]                          floating enable
 for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
 for_window [app_id="kitty" title="wttr.in"]                     floating enable

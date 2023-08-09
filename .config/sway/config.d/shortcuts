@@ -73,6 +73,8 @@ bindsym XF86AudioPlay                                           exec playerctl p
 bindsym XF86AudioPause                                          exec playerctl play-pause
 bindsym XF86AudioNext                                           exec playerctl next
 bindsym XF86AudioPrev                                           exec playerctl previous
+bindsym $altMod+Left                                            exec playerctl previous
+bindsym $altMod+Right                                           exec playerctl next
 
 #~~~ sway
 bindsym $mod+Shift+r                                            reload
@@ -93,7 +95,9 @@ bindsym $mod+Return                                             exec $terminal
 bindsym $mod+d                                                  exec $HOME/.config/sway/scripts.d/programtoggle.sh $menu
 bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/wofi-emoji.sh
 bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
-bindsym $altMod+v                                               exec $HOME/scripts/cliphist list | wofi --show dmenu -k /dev/null | $HOME/scripts/cliphist decode | wl-copy
+bindsym $altMod+v                                               exec $HOME/scripts/cliphist list | wofi --show dmenu | $HOME/scripts/cliphist decode | wl-copy
 bindsym $altMod+shift+v                                         exec $HOME/scripts/cliphist wipe
 bindsym $altMod+shift+d                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -e 
-bindsym $altMod+shift+f                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t 
+bindsym $altMod+shift+f                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t
+bindsym XF86Favorites                                           exec playerctl play-pause
+bindsym ctrl+$altMod+l                                          exec $HOME/.config/sway/scripts.d/powermenu.sh --lock
