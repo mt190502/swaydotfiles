@@ -4,7 +4,7 @@
 ##
 #################################################
 #~~~ screen
-output $scr1 pos           0     1440
+output $scr1 pos           0     1080
 output $scr2 pos           0     0
 output *     adaptive_sync on
 output *     subpixel      rgb

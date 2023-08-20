@@ -32,13 +32,13 @@ for_window [app_id="org.kde.dolphin"]	                        floating enable
 ####
 for_window [class="Steam" title="Steam - News(.*)"]             floating enable
 for_window [class="Steam"]                                      workspace 4; move container workspace 4
-for_window [class="vlc"]                                        workspace 4; move container workspace 4
+#for_window [class="vlc"]                                        workspace 4; move container workspace 4
 
 
 #####
 ## Workspace 5 ~ Develop
 ####
-for_window [class="jetbrains-(.*)"]                             workspace 5; move container workspace 5
+#for_window [class="jetbrains-(.*)"]                             workspace 5; move container workspace 5
 
 
 #####
@@ -53,10 +53,10 @@ for_window [app_id="org.telegram.desktop"]                      workspace 6; mov
 ####
 for_window [app_id="SoundWireServer"]                           workspace 7; floating enable; move container workspace 7
 for_window [app_id="firetools"]                                 workspace 7; floating enable; move container workspace 7
-for_window [app_id="firewall-config"]                           workspace 7; floating enable; move container workspace 7
+#for_window [app_id="firewall-config"]                           workspace 7; floating enable; move container workspace 7
 for_window [app_id="gnome-control-center"]                      workspace 7; floating enable; move container workspace 7
 #for_window [app_id="qt5ct"]                                     workspace 7; floating enable; move container workspace 7
-for_window [app_id="system-config-printer"]                     workspace 7; floating enable; move container workspace 7
+#for_window [app_id="system-config-printer"]                     workspace 7; floating enable; move container workspace 7
 #for_window [app_id="wpg"]                                       workspace 7; floating enable; move container workspace 7
 #for_window [class="(?i)Lxappearance$"]                          workspace 7; floating enable; move container workspace 7
 
