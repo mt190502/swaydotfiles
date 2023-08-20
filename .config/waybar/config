@@ -32,10 +32,10 @@
 			"default"              : ""
 		},
 		"persistent_workspaces"    : {
-			"1"                    : ["eSCREEN2"],
-			"2"                    : ["eSCREEN2"],
-			"3"                    : ["eSCREEN2"],
-			"4"                    : ["eSCREEN2"],
+			"1"                    : ["SCREEN2"],
+			"2"                    : ["SCREEN2"],
+			"3"                    : ["SCREEN2"],
+			"4"                    : ["SCREEN2"],
 			"5"                    : ["SCREEN1"],
 			"6"                    : ["SCREEN1"],
 			"7"                    : ["SCREEN1"],
