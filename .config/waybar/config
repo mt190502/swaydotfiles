@@ -32,14 +32,14 @@
 			"default"              : ""
 		},
 		"persistent_workspaces"    : {
-			"1"                    : ["eSCREEN21"],
-			"2"                    : ["eSCREEN21"],
-			"3"                    : ["eSCREEN21"],
-			"4"                    : ["eSCREEN21"],
-			"5"                    : ["SCREEN12"],
-			"6"                    : ["SCREEN12"],
-			"7"                    : ["SCREEN12"],
-			"8"                    : ["SCREEN12"],
+			"1"                    : ["eSCREEN2"],
+			"2"                    : ["eSCREEN2"],
+			"3"                    : ["eSCREEN2"],
+			"4"                    : ["eSCREEN2"],
+			"5"                    : ["SCREEN1"],
+			"6"                    : ["SCREEN1"],
+			"7"                    : ["SCREEN1"],
+			"8"                    : ["SCREEN1"],
 		}
 	},
 
