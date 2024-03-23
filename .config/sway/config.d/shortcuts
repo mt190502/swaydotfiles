@@ -91,7 +91,7 @@ bindsym $altMod+k                                               exec wtype -P up
 bindsym $altMod+l                                               exec wtype -P right 
 
 #~~~ other
-bindsym $mod+Return                                             exec $terminal
+bindsym $mod+Return                                             exec $terminal -e bash -c "tmux new-window && tmux attach -t daemonmodetmux"
 bindsym $mod+d                                                  exec $HOME/.config/sway/scripts.d/programtoggle.sh $menu
 bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/wofi-emoji.sh
 bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh

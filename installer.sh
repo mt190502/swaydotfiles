@@ -54,18 +54,21 @@ PACKAGES=(
 )
 
 CONFIGDIRS=(
-	'.config/dolphinrc'
+	'.config/alacritty'
 	'.config/environment.d'
 	'.config/fontconfig'
 	'.config/kitty'
+	'.config/Kvantum'
 	'.config/mako'
 	'.config/neofetch'
 	'.config/nvim'
 	'.config/qt5ct'
+	'.config/qt6ct'
 	'.config/swappy'
 	'.config/sway'
 	'.config/swaylock'
 	'.config/swaynag'
+	'.config/tmux'
 	'.config/waybar'
 	'.config/wofi'
 	'.config/wpg'
@@ -217,11 +220,11 @@ case $@ in
 		backup_dotfiles "${CONFIGDIRS[@]}"
 
 	;;
-    restore|-R|--restore)
+	restore|-R|--restore)
 		remove_dotfiles "${CONFIGDIRS[@]}"
 		restore_dotfiles
 	;;
-    *)
+	*)
 		echo -e "${FGRED}No command specified...${FGRES}"
 		exit
 	;;

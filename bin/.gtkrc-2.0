@@ -1,13 +1,15 @@
+gtk-sound-theme-name="ocean"
+gtk-enable-animations=1
+gtk-primary-button-warps-slider=1
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "/home/fedora/.gtkrc-2.0.mine"
-gtk-theme-name="FlatColor"
-gtk-icon-theme-name="flattrcolor"
-gtk-font-name="Sans 10"
+gtk-theme-name="Breeze-Dark"
+gtk-icon-theme-name="Flat-Remix-Blue-Dark"
+gtk-font-name="Ubuntu, Medium 10"
 gtk-cursor-theme-name="Adwaita"
-gtk-cursor-theme-size=0
-gtk-toolbar-style=GTK_TOOLBAR_BOTH
+gtk-cursor-theme-size=24
+gtk-toolbar-style=3
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=1
 gtk-menu-images=1

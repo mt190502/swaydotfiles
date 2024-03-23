@@ -1,22 +1,22 @@
-@define-color activeColor   #5075a4;
-@define-color inactiveColor #375071;
+@define-color activeColor   #5ea768;
+@define-color inactiveColor #417348;
 @define-color urgentColor   #FF0000;
-@define-color color00       #1c150f;
-@define-color color01       #2A56A5;
-@define-color color02       #536FA1;
-@define-color color03       #6E89B6;
-@define-color color04       #2C59AA;
-@define-color color05       #9DB1CF;
-@define-color color06       #6493CE;
-@define-color color07       #cdd2d9;
-@define-color color08       #3c2d20;
-@define-color color09       #296be4;
-@define-color color10       #5c8be1;
-@define-color color11       #7cadff;
-@define-color color12       #2b6fea;
-@define-color color13       #b4e1ff;
-@define-color color14       #6ebcff;
-@define-color color15       #f7fdff;
+@define-color color00       #0B2613;
+@define-color color01       #4D9E67;
+@define-color color02       #27CE4E;
+@define-color color03       #8AEE71;
+@define-color color04       #2F925A;
+@define-color color05       #61DB68;
+@define-color color06       #76D283;
+@define-color color07       #c9f2c3;
+@define-color color08       #154d26;
+@define-color color09       #54dc80;
+@define-color color10       #22ff5c;
+@define-color color11       #a5ff7c;
+@define-color color12       #30ca73;
+@define-color color13       #69ff75;
+@define-color color14       #84ff9b;
+@define-color color15       #eaffe3;
 
 * {
 	border-radius: 5px;
@@ -29,8 +29,9 @@ window#waybar {
 	background-color: transparent;
 }
 
-window#waybar.empty #window {
+window#waybar.empty #window label {
 	background-color: transparent;
+	color: rgba(0,0,0,0);
 }
 
 #tray,

@@ -73,8 +73,9 @@ for_window [app_id="gnome-control-center"]                      workspace 7; flo
 for_window [app_id="com.usebottles.bottles"]                    floating enable
 for_window [app_id="gnome-calculator"]                          floating enable
 for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
-for_window [app_id="kitty" title="wttr.in"]                     floating enable
-for_window [app_id="kitty" title="nmtui"]                       floating enable
+for_window [app_id="Alacritty" title="wttr.in"]                 floating enable
+for_window [app_id="Alacritty" title="nmtui"]                   floating enable
+#for_window [app_id="Alacritty" title="daemonmodealacritty"]	floating enable; move container to workspace 4; resize set 1ppt 1ppt, move position -1000 -1000
 for_window [app_id="nm-connection-editor$"]                     floating enable
 for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]   floating enable
 for_window [app_id="org.kde.discover"]                          floating enable

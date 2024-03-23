@@ -1,0 +1,157 @@
+#################################################
+##
+#### Colors
+##
+#################################################
+import = [
+	#"~/.config/alacritty/themes/afterglow.toml",
+	#"~/.config/alacritty/themes/alabaster.toml",
+	#"~/.config/alacritty/themes/alabaster_dark.toml",
+	#"~/.config/alacritty/themes/alacritty.toml",
+	#"~/.config/alacritty/themes/argonaut.toml",
+	#"~/.config/alacritty/themes/ashes_dark.toml",
+	#"~/.config/alacritty/themes/ashes_light.toml",
+	#"~/.config/alacritty/themes/atom_one_light.toml",
+	#"~/.config/alacritty/themes/aura.toml",
+	#"~/.config/alacritty/themes/ayu_dark.toml",
+	#"~/.config/alacritty/themes/ayu_light.toml",
+	#"~/.config/alacritty/themes/baitong.toml",
+	#"~/.config/alacritty/themes/base16_default_dark.toml",
+	#"~/.config/alacritty/themes/blood_moon.toml",
+	#"~/.config/alacritty/themes/bluish.toml",
+	#"~/.config/alacritty/themes/breeze.toml",
+	#"~/.config/alacritty/themes/campbell.toml",
+	#"~/.config/alacritty/themes/carbonfox.toml",
+	#"~/.config/alacritty/themes/catppuccin.toml",
+	#"~/.config/alacritty/themes/catppuccin_frappe.toml",
+	#"~/.config/alacritty/themes/catppuccin_latte.toml",
+	#"~/.config/alacritty/themes/catppuccin_macchiato.toml",
+	#"~/.config/alacritty/themes/catppuccin_mocha.toml",
+	#"~/.config/alacritty/themes/challenger_deep.toml",
+	#"~/.config/alacritty/themes/citylights.toml",
+	#"~/.config/alacritty/themes/Cobalt2.toml",
+	#"~/.config/alacritty/themes/cyber_punk_neon.toml",
+	#"~/.config/alacritty/themes/darcula.toml",
+	#"~/.config/alacritty/themes/dark_pastels.toml",
+	#"~/.config/alacritty/themes/deep_space.toml",
+	#"~/.config/alacritty/themes/default.toml",
+	#"~/.config/alacritty/themes/doom_one.toml",
+	#"~/.config/alacritty/themes/dracula.toml",
+	#"~/.config/alacritty/themes/everforest_dark.toml",
+	#"~/.config/alacritty/themes/everforest_light.toml",
+	#"~/.config/alacritty/themes/falcon.toml",
+	#"~/.config/alacritty/themes/flat_remix.toml",
+	#"~/.config/alacritty/themes/flexoki.toml",
+	#"~/.config/alacritty/themes/github_dark.toml",
+	#"~/.config/alacritty/themes/github_dark_colorblind.toml",
+	#"~/.config/alacritty/themes/github_dark_default.toml",
+	#"~/.config/alacritty/themes/github_dark_dimmed.toml",
+	#"~/.config/alacritty/themes/github_dark_high_contrast.toml",
+	#"~/.config/alacritty/themes/github_dark_tritanopia.toml",
+	#"~/.config/alacritty/themes/github_light.toml",
+	#"~/.config/alacritty/themes/github_light_colorblind.toml",
+	#"~/.config/alacritty/themes/github_light_default.toml",
+	#"~/.config/alacritty/themes/github_light_high_contrast.toml",
+	#"~/.config/alacritty/themes/github_light_tritanopia.toml",
+	#"~/.config/alacritty/themes/gnome_terminal.toml",
+	#"~/.config/alacritty/themes/google.toml",
+	#"~/.config/alacritty/themes/gotham.toml",
+	#"~/.config/alacritty/themes/gruvbox_dark.toml",
+	#"~/.config/alacritty/themes/gruvbox_light.toml",
+	#"~/.config/alacritty/themes/gruvbox_material.toml",
+	#"~/.config/alacritty/themes/gruvbox_material_hard_dark.toml",
+	#"~/.config/alacritty/themes/gruvbox_material_hard_light.toml",
+	#"~/.config/alacritty/themes/gruvbox_material_medium_dark.toml",
+	#"~/.config/alacritty/themes/gruvbox_material_medium_light.toml",
+	#"~/.config/alacritty/themes/hardhacker.toml",
+	#"~/.config/alacritty/themes/high_contrast.toml",
+	#"~/.config/alacritty/themes/horizon-dark.toml",
+	#"~/.config/alacritty/themes/hyper.toml",
+	#"~/.config/alacritty/themes/inferno.toml",
+	#"~/.config/alacritty/themes/iris.toml",
+	#"~/.config/alacritty/themes/iterm.toml",
+	#"~/.config/alacritty/themes/kanagawa_dragon.toml",
+	#"~/.config/alacritty/themes/kanagawa_wave.toml",
+	#"~/.config/alacritty/themes/konsole_linux.toml",
+	#"~/.config/alacritty/themes/low_contrast.toml",
+	#"~/.config/alacritty/themes/Mariana.toml",
+	#"~/.config/alacritty/themes/marine_dark.toml",
+	#"~/.config/alacritty/themes/material_theme.toml",
+	#"~/.config/alacritty/themes/material_theme_mod.toml",
+	#"~/.config/alacritty/themes/meliora.toml",
+	#"~/.config/alacritty/themes/midnight-haze.toml",
+	#"~/.config/alacritty/themes/monokai_charcoal.toml",
+	#"~/.config/alacritty/themes/monokai_pro.toml",
+	#"~/.config/alacritty/themes/moonlight_ii_vscode.toml",
+	#"~/.config/alacritty/themes/msx.toml",
+	#"~/.config/alacritty/themes/night_owlish_light.toml",
+	#"~/.config/alacritty/themes/nightfox.toml",
+	#"~/.config/alacritty/themes/noctis-lux.toml",
+	#"~/.config/alacritty/themes/nord.toml",
+	#"~/.config/alacritty/themes/nord_light.toml",
+	#"~/.config/alacritty/themes/nordic.toml",
+	#"~/.config/alacritty/themes/oceanic_next.toml",
+	#"~/.config/alacritty/themes/omni.toml",
+	#"~/.config/alacritty/themes/one_dark.toml",
+	#"~/.config/alacritty/themes/palenight.toml",
+	#"~/.config/alacritty/themes/papercolor_dark.toml",
+	#"~/.config/alacritty/themes/papercolor_light.toml",
+	#"~/.config/alacritty/themes/papertheme.toml",
+	#"~/.config/alacritty/themes/pastel_dark.toml",
+	#"~/.config/alacritty/themes/pencil_dark.toml",
+	#"~/.config/alacritty/themes/pencil_light.toml",
+	#"~/.config/alacritty/themes/rainbow.toml",
+	#"~/.config/alacritty/themes/remedy_dark.toml",
+	#"~/.config/alacritty/themes/rose-pine-dawn.toml",
+	#"~/.config/alacritty/themes/rose-pine-moon.toml",
+	#"~/.config/alacritty/themes/rose-pine.toml",
+	#"~/.config/alacritty/themes/seashells.toml",
+	#"~/.config/alacritty/themes/smoooooth.toml",
+	#"~/.config/alacritty/themes/snazzy.toml",
+	#"~/.config/alacritty/themes/solarized_dark.toml",
+	#"~/.config/alacritty/themes/solarized_light.toml",
+	#"~/.config/alacritty/themes/solarized_osaka.toml",
+	#"~/.config/alacritty/themes/taerminal.toml",
+	#"~/.config/alacritty/themes/tango_dark.toml",
+	#"~/.config/alacritty/themes/tender.toml",
+	#"~/.config/alacritty/themes/terminal_app.toml",
+	#"~/.config/alacritty/themes/thelovelace.toml",
+	#"~/.config/alacritty/themes/themes",
+	#"~/.config/alacritty/themes/tokyo-night-storm.toml",
+	#"~/.config/alacritty/themes/tokyo-night.toml",
+	#"~/.config/alacritty/themes/tomorrow_night.toml",
+	#"~/.config/alacritty/themes/tomorrow_night_bright.toml",
+	#"~/.config/alacritty/themes/ubuntu.toml",
+	"~/.config/alacritty/themes/vibrant-ink.toml",
+	#"~/.config/alacritty/themes/wombat.toml",
+	#"~/.config/alacritty/themes/xterm.toml",
+	#"~/.config/alacritty/themes/zenburn.toml",
+]
+
+
+
+#################################################
+##
+#### Fonts
+##
+#################################################
+[font]
+size = 9
+normal      = { family = "MesloLGS NF", style = "Bold" }
+bold        = { family = "Hack", style = "Bold" }
+italic      = { family = "Hack", style = "Italic" }
+bold_italic = { family = "Hack", style = "Bold Italic" }
+
+
+
+#################################################
+##
+#### Settings
+##
+#################################################
+[shell]
+program = "tmux"
+
+[window]
+dynamic_title = true
+

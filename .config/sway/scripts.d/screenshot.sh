@@ -18,7 +18,7 @@ takeInitialSS() {
 
 	for a in $(swaymsg -t get_outputs | jq -r ".[].name"); do
         [[ -e "/tmp/$a.png" ]] && rm /tmp/$a.png && rm /tmp/ss.png &>/dev/null
-		grim ${cursor:+-c} -o $a /tmp/$a.png
+		grim -l 1 ${cursor:+-c} -o $a /tmp/$a.png
 		swaymsg for_window "[title=\"imv(.*)$a.png\"]" move to output $a
 		swaymsg for_window "[title=\"imv(.*)$a.png\"]" fullscreen true
 		imv-wayland /tmp/$a.png &

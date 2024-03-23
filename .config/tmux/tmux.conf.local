@@ -1,0 +1,3 @@
+tmux_conf_theme_terminal_title="#h ❐ #S ● #I #W"
+tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
+tmux_conf_theme_status_right=" %H:%M:%S , %Y/%m/%d , | #{username}#{root} | #{hostname} |"

@@ -6,16 +6,11 @@
 #~~~ gtk configuration
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
-exec_always {
-    gsettings set $gnomeschema gtk-theme 'FlatColor'
-    gsettings set $gnomeschema icon-theme 'flattrcolor'
-    gsettings set $gnomeschema cursor-theme 'Adwaita'
-    gsettings set $gnomeschema font-name 'Ubuntu, Medium 10'
-}
 
 #~~~ startup apps
 #exec flatpak run com.github.wwmm.easyeffects --gapplication-service
-exec_always $HOME/.config/sway/scripts.d/starter.sh
+exec_always $HOME/.config/sway/scripts.d/tmuxServer.sh
+exec $HOME/.config/sway/scripts.d/starter.sh
 #exec bash -c "while true; do wpg -m; sleep 1800; done"
 #exec --no-startup-id $HOME/.config/sway/scripts.d/keyring.sh
-exec_always --no-startup-id $HOME/.config/sway/scripts.d/screensetup.sh
+#exec_always --no-startup-id $HOME/.config/sway/scripts.d/screensetup.sh

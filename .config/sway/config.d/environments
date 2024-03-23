@@ -10,7 +10,7 @@ set $imageviewer   flatpak run org.kde.gwenview
 set $filemanager   dolphin
 set $mediaplayer   flatpak run org.videolan.vlc
 set $menu          wofi --prompt "Search Apps" --show drun
-set $terminal      kitty
+set $terminal      alacritty
 
 #~~~ system
 set $gnome-schema  org.gnome.desktop.interface

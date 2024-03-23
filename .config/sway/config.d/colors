@@ -3,22 +3,22 @@
 #### Colors
 ##
 #################################################
-set $activeColor   #5075a4
-set $inactiveColor #375071
+set $activeColor   #5ea768
+set $inactiveColor #417348
 set $urgentColor   #FF0000
-set $color00       #1c150f
-set $color01       #2A56A5
-set $color02       #536FA1
-set $color03       #6E89B6
-set $color04       #2C59AA
-set $color05       #9DB1CF
-set $color06       #6493CE
-set $color07       #cdd2d9
-set $color08       #3c2d20
-set $color09       #296be4
-set $color10       #5c8be1
-set $color11       #7cadff
-set $color12       #2b6fea
-set $color13       #b4e1ff
-set $color14       #6ebcff
-set $color15       #f7fdff
+set $color00       #0B2613
+set $color01       #4D9E67
+set $color02       #27CE4E
+set $color03       #8AEE71
+set $color04       #2F925A
+set $color05       #61DB68
+set $color06       #76D283
+set $color07       #c9f2c3
+set $color08       #154d26
+set $color09       #54dc80
+set $color10       #22ff5c
+set $color11       #a5ff7c
+set $color12       #30ca73
+set $color13       #69ff75
+set $color14       #84ff9b
+set $color15       #eaffe3

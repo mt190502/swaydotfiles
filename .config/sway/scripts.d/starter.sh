@@ -18,7 +18,10 @@ startprocess /usr/libexec/kdeconnectd                                           
 startprocess /usr/libexec/packagekitd                                                                                                                                      &
 startprocess /usr/bin/mako                                                                                                                                                 &
 startprocess /usr/bin/easyeffects --gapplication-service                                                                                                                   &
+#startprocess /usr/bin/alacritty -t daemonmodealacritty															   &
+startprocess /usr/bin/tmux new-session -ds daemonmodetmux														   &
 startprocess /usr/bin/seapplet                                                                                                                                             &
+startprocess /usr/bin/solaar -w hide                                                                                                                                       &
 #startprocess /usr/sbin/rfkill block wlan                                                                                                                                   &
 #startprocess /usr/bin/wl-paste -w python3 ~/.config/sway/scripts.d/clipboard.py -w                                                                                         &
 startprocess /usr/bin/wl-paste -w $HOME/scripts/cliphist store                                                                                                             &
@@ -28,7 +31,11 @@ sleep 3 && startprocess /usr/bin/nextcloud                                      
 
 
 
-if [[ -e /usr/libexec/kf5/polkit-kde-authentication-agent-1 ]]; then
+if [[ -e /usr/libexec/kf6/polkit-kde-authentication-agent-1 ]]; then
+	XDG_CURRENT_DESKTOP=kde QT_STYLE_OVERRIDE= startprocess /usr/libexec/kf6/polkit-kde-authentication-agent-1 &
+elif [[ -e /usr/lib/kf6/polkit-kde-authentication-agent-1 ]]; then
+	XDG_CURRENT_DESKTOP=kde startprocess /usr/lib/kf6/polkit-kde-authentication-agent-1 &
+elif [[ -e /usr/libexec/kf5/polkit-kde-authentication-agent-1 ]]; then
 	XDG_CURRENT_DESKTOP=kde startprocess /usr/libexec/kf5/polkit-kde-authentication-agent-1 &
 elif [[ -e /usr/lib/kf5/polkit-kde-authentication-agent-1 ]]; then
 	XDG_CURRENT_DESKTOP=kde startprocess /usr/lib/kf5/polkit-kde-authentication-agent-1 &

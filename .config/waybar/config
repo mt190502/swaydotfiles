@@ -16,7 +16,7 @@
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
 	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
-	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "custom/vpn", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "battery", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "custom/vpn", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
 
 
 
@@ -31,15 +31,15 @@
 			"focused"              : "",
 			"default"              : ""
 		},
-		"persistent_workspaces"    : {
-			"1"                    : ["SCREEN2"],
-			"2"                    : ["SCREEN2"],
-			"3"                    : ["SCREEN2"],
-			"4"                    : ["SCREEN2"],
-			"5"                    : ["SCREEN1"],
-			"6"                    : ["SCREEN1"],
-			"7"                    : ["SCREEN1"],
-			"8"                    : ["SCREEN1"],
+		"persistent-workspaces"    : {
+			"1"                    : ["SCREEN1"],
+			"2"                    : ["SCREEN1"],
+			"3"                    : ["SCREEN1"],
+			"4"                    : ["SCREEN1"],
+			"5"                    : ["SCREEN2"],
+			"6"                    : ["SCREEN2"],
+			"7"                    : ["SCREEN2"],
+			"8"                    : ["SCREEN2"],
 		}
 	},
 
@@ -104,7 +104,7 @@
 		"format-linked"            : " (No IP)",
 		"format-disconnected"      : "⚠  Disconnected",
 		"format-alt"               : "{essid} {ipaddr}/{cidr} ",
-		"on-click-right"           : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -T nmtui -e nmtui"
+		"on-click-right"           : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -T nmtui -e nmtui"
 	},
 
 	"pulseaudio": {
@@ -185,7 +185,7 @@
 		"interval"                 : 3600,
 		"exec"                     : "curl -s 'https://wttr.in/Istanbul?format=1' | sed 's/ //1'",
 		"exec-if"                  : "ping wttr.in -c1",
-		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -T wttr.in --hold sh -c 'curl https://wttr.in/Istanbul'"
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -T wttr.in -e sh -c 'curl https://wttr.in/Istanbul; read'"
 	},
 	"custom/vpn": {
 		"format"                   : "{}",
