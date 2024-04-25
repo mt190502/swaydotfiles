@@ -31,16 +31,16 @@
 			"focused"              : "",
 			"default"              : ""
 		},
-		"persistent-workspaces"    : {
-			"1"                    : ["SCREEN1"],
-			"2"                    : ["SCREEN1"],
-			"3"                    : ["SCREEN1"],
-			"4"                    : ["SCREEN1"],
-			"5"                    : ["SCREEN2"],
-			"6"                    : ["SCREEN2"],
-			"7"                    : ["SCREEN2"],
-			"8"                    : ["SCREEN2"],
-		}
+	//	"persistent-workspaces"    : {
+	//		"1"                    : ["SCREEN1"],
+	//		"2"                    : ["SCREEN1"],
+	//		"3"                    : ["SCREEN1"],
+	//		"4"                    : ["SCREEN1"],
+	//		"5"                    : ["SCREEN2"],
+	//		"6"                    : ["SCREEN2"],
+	//		"7"                    : ["SCREEN2"],
+	//		"8"                    : ["SCREEN2"],
+	//	}
 	},
 
 	"sway/mode": {

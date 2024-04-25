@@ -3,27 +3,27 @@
 #input,
 #text {
 	margin: 5px;
-	background-color: #0B2613;
+	background-color: #11050f;
 }
 
 #window {
-	border: 4px solid #5ea768;
+	border: 4px solid #93606c;
 	border-radius: 5px;
-	color: #eaffe3;
+	color: #ffede7;
 }
 
 #input {
 	border: none;
-	border-bottom: 2px solid #5ea768;
+	border-bottom: 2px solid #93606c;
 }
 
 #text {
-	color: #eaffe3;
+	color: #ffede7;
 	font-size: 16px;
 }
 
 #entry:selected,
 #img:selected,
 #text:selected {
-	background-color: #417348;
+	background-color: #65424a;
 }

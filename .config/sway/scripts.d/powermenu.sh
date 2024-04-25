@@ -21,7 +21,8 @@ blurlock() {
 }
 
 #~~~ menu
-[[ "$@" == "--lock" ]] && blurlock && exit
+[[ "$@" == "--lock" ]] && { blurlock; exit 0; }
+[[ "$@" == "--suspend" ]] && { blurlock; sleep 1; systemctl suspend; exit 0; }
 MODE=$(swaynag -t wpgtheme -m PowerMenu -Z Shutdown 'echo 0' -Z Reboot 'echo 1' -Z Suspend 'echo 2' -Z Lock 'echo 3' -Z Logout 'echo 4')
 [[ ! -n "$MODE" ]] && exit
 CONFIRM=$(swaynag -t wpgtheme -m Confirm? -Z No 'echo no' -Z Yes 'echo yes')

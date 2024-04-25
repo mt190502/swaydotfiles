@@ -31,28 +31,28 @@ bindsym $mod+v                                                  split v
 bindsym $mod+f                                                  fullscreen
 bindsym $mod+Shift+space                                        floating toggle
 #bindsym $mod+Tab                                               focus parent
-bindsym $mod+shift+1                                            move container to workspace $ws1
-bindsym $mod+shift+2                                            move container to workspace $ws2
-bindsym $mod+shift+3                                            move container to workspace $ws3
-bindsym $mod+shift+4                                            move container to workspace $ws4
-bindsym $altMod+shift+1                                         move container to workspace $ws5
-bindsym $altMod+shift+2                                         move container to workspace $ws6
-bindsym $altMod+shift+3                                         move container to workspace $ws7
-bindsym $altMod+shift+4                                         move container to workspace $ws8
+bindsym $mod+shift+1                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 1
+bindsym $mod+shift+2                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 2
+bindsym $mod+shift+3                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 3
+bindsym $mod+shift+4                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 4
+bindsym $mod+shift+5                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 5
+bindsym $mod+shift+6                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 6
+bindsym $mod+shift+7                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 7
+bindsym $mod+shift+8                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 8
 
 #~~~ workspace
 bindsym $mod+s                                                  layout stacking
 bindsym $mod+w                                                  layout tabbed
 bindsym $mod+e                                                  layout toggle split
 bindsym $mod+Tab                                                workspace next
-bindsym $mod+1                                                  workspace $ws1
-bindsym $mod+2                                                  workspace $ws2
-bindsym $mod+3                                                  workspace $ws3
-bindsym $mod+4                                                  workspace $ws4
-bindsym $altMod+1                                               workspace $ws5
-bindsym $altMod+2                                               workspace $ws6
-bindsym $altMod+3                                               workspace $ws7
-bindsym $altMod+4                                               workspace $ws8
+bindsym $mod+1                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 1
+bindsym $mod+2                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 2
+bindsym $mod+3                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 3
+bindsym $mod+4                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 4
+bindsym $mod+5                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 5
+bindsym $mod+6                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 6
+bindsym $mod+7                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 7
+bindsym $mod+8                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 8
 
 #~~~ sound
 bindsym XF86AudioRaiseVolume                                    exec pactl set-sink-volume @DEFAULT_SINK@ +5%

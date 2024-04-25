@@ -24,6 +24,7 @@ startprocess /usr/bin/seapplet                                                  
 startprocess /usr/bin/solaar -w hide                                                                                                                                       &
 #startprocess /usr/sbin/rfkill block wlan                                                                                                                                   &
 #startprocess /usr/bin/wl-paste -w python3 ~/.config/sway/scripts.d/clipboard.py -w                                                                                         &
+startprocess /usr/bin/wlsunset -S "07:00" -s "19:00"                                                                                                                       &
 startprocess /usr/bin/wl-paste -w $HOME/scripts/cliphist store                                                                                                             &
 startprocess /usr/bin/swayidle -w timeout 120 "~/.config/sway/scripts.d/powermenu.sh --lock" timeout 140 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' &
 

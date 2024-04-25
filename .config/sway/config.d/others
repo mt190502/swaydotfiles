@@ -14,3 +14,4 @@ exec $HOME/.config/sway/scripts.d/starter.sh
 #exec bash -c "while true; do wpg -m; sleep 1800; done"
 #exec --no-startup-id $HOME/.config/sway/scripts.d/keyring.sh
 #exec_always --no-startup-id $HOME/.config/sway/scripts.d/screensetup.sh
+#exec_always --no-startup-id $HOME/.config/sway/scripts.d/officemode.sh
