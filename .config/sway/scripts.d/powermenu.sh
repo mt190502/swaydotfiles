@@ -18,17 +18,18 @@ blurlock() {
         convert -blur 0x10 $image.png $image-blurred.png
         args="$args --image $output:$image-blurred.png"
     done
-    WAYLAND_DISPLAY=$WAYLAND_DISPLAY swaylock $args --daemonize
+    WAYLAND_DISPLAY=$WAYLAND_DISPLAY swaylock $args
     rm -f $HOME/.cache/swaylock.lock
 }
 
 #~~~ menu
 [[ "$@" == "--lock" ]] && { blurlock; exit 0; }
 [[ "$@" == "--suspend" ]] && { blurlock; sleep 1; systemctl suspend; exit 0; }
-[[ "$@" == "--rescuelock" ]] && {
-	while [[ -f "$HOME/.cache/swaylock.lock" ]] && [[ -z "$(ps aux | grep -v grep | grep swaylock)" ]]; do
-		blurlock
-		exit 0
+[[ "$@" == "--daemonize" ]] && {
+	while true; do
+		if [[ -f "$HOME/.cache/swaylock.lock" ]] && [[ -z "$(ps aux | grep -v grep | grep swaylock)" ]]; then
+			blurlock
+		fi
 	done
 }
 
@@ -44,12 +45,11 @@ case $MODE in
         systemctl reboot -i
     ;;
     2)
-        blurlock &
-        sleep 1
+        touch $HOME/.cache/swaylock.lock
         systemctl suspend
     ;;
     3)
-        blurlock
+        touch $HOME/.cache/swaylock.lock
     ;;
     4)
         swaymsg exit

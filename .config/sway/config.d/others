@@ -8,6 +8,7 @@ exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHO
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
 
 #~~~ startup apps
+exec $HOME/.config/sway/scripts.d/powermenu.sh --daemonize
 exec /usr/bin/bash -c "XDG_CURRENT_DESKTOP=kde QT_STYLE_OVERRIDE= /usr/libexec/kf6/polkit-kde-authentication-agent-1"
 exec /usr/bin/bash -c "sleep 2 && nextcloud"
 exec /usr/bin/easyeffects --gapplication-service
