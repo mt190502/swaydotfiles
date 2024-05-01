@@ -170,7 +170,7 @@
 	},
 
 	"custom/powermenu": {
-		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/powermenu.sh",
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/powermenu.sh --lockmenu",
 		"format"                   : "",
 		"tooltip"                  : false
 	},
