@@ -16,7 +16,7 @@ for_window [app_id="firefox" title="Picture-in-Picture"]        floating enable
 for_window [app_id="firefox" title="(.*)Sharing Indicator"]     floating enable
 for_window [app_id="firefox" title="(.*)Private Browsing"]      floating enable
 for_window [app_id="firefox" title="Extension: (.*)"]           floating enable
-#for_window [app_id="firefox"]                                   workspace 2; move container workspace 2
+#for_window [app_id="firefox"]                                  workspace 2; move container workspace 2
 
 
 #####
@@ -31,7 +31,7 @@ for_window [app_id="org.kde.dolphin"]	                        floating enable
 ## Workspace 4 ~ Media
 ####
 for_window [class="Steam" title="Steam - News(.*)"]             floating enable
-for_window [class="Steam"]                                      workspace 4; move container workspace 4
+#for_window [class="Steam"]                                      workspace 4; move container workspace 4
 #for_window [class="vlc"]                                        workspace 4; move container workspace 4
 
 
@@ -44,17 +44,17 @@ for_window [class="Steam"]                                      workspace 4; mov
 #####
 ## Workspace 6 ~ Social
 ####
-for_window [class="discord"]                                    workspace 6; move container workspace 6
-for_window [app_id="org.telegram.desktop"]                      workspace 6; move container workspace 6
+#for_window [class="discord"]                                    workspace 6; move container workspace 6
+#for_window [app_id="org.telegram.desktop"]                      workspace 6; move container workspace 6
 
 
 #####
 ## Workspace 7 ~ System Tools
 ####
-for_window [app_id="SoundWireServer"]                           workspace 7; floating enable; move container workspace 7
-for_window [app_id="firetools"]                                 workspace 7; floating enable; move container workspace 7
+#for_window [app_id="SoundWireServer"]                           workspace 7; floating enable; move container workspace 7
+#for_window [app_id="firetools"]                                 workspace 7; floating enable; move container workspace 7
 #for_window [app_id="firewall-config"]                           workspace 7; floating enable; move container workspace 7
-for_window [app_id="gnome-control-center"]                      workspace 7; floating enable; move container workspace 7
+#for_window [app_id="gnome-control-center"]                      workspace 7; floating enable; move container workspace 7
 #for_window [app_id="qt5ct"]                                     workspace 7; floating enable; move container workspace 7
 #for_window [app_id="system-config-printer"]                     workspace 7; floating enable; move container workspace 7
 #for_window [app_id="wpg"]                                       workspace 7; floating enable; move container workspace 7
@@ -75,7 +75,6 @@ for_window [app_id="gnome-calculator"]                          floating enable
 for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
 for_window [app_id="Alacritty" title="wttr.in"]                 floating enable
 for_window [app_id="Alacritty" title="nmtui"]                   floating enable
-#for_window [app_id="Alacritty" title="daemonmodealacritty"]	floating enable; move container to workspace 4; resize set 1ppt 1ppt, move position -1000 -1000
 for_window [app_id="nm-connection-editor$"]                     floating enable
 for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]   floating enable
 for_window [app_id="org.kde.discover"]                          floating enable

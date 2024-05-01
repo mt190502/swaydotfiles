@@ -99,5 +99,4 @@ bindsym $altMod+v                                               exec $HOME/scrip
 bindsym $altMod+shift+v                                         exec $HOME/scripts/cliphist wipe
 bindsym $altMod+shift+d                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -e 
 bindsym $altMod+shift+f                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t
-bindsym XF86Favorites                                           exec playerctl play-pause
 bindsym ctrl+$altMod+l                                          exec $HOME/.config/sway/scripts.d/powermenu.sh --lock

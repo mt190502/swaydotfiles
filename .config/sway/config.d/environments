@@ -4,33 +4,14 @@
 ##
 #################################################
 #~~~ apps
-set $appstore      plasma-discover
-set $browser       flatpak run org.mozilla.firefox
-set $imageviewer   flatpak run org.kde.gwenview
-set $filemanager   dolphin
-set $mediaplayer   flatpak run org.videolan.vlc
+#set $appstore      plasma-discover
+#set $browser       flatpak run org.mozilla.firefox
+#set $imageviewer   flatpak run org.kde.gwenview
+#set $filemanager   dolphin
+#set $mediaplayer   flatpak run org.videolan.vlc
 set $menu          wofi --prompt "Search Apps" --show drun
 set $terminal      alacritty
 
 #~~~ system
-set $gnome-schema  org.gnome.desktop.interface
 set $scr1          SCREEN1
 set $scr2          SCREEN2
-
-#~~~ workspace
-#set $ws1           "1"
-#set $ws2           "2"
-#set $ws3           "3"
-#set $ws4           "4"
-#set $ws5           "5"
-#set $ws6           "6"
-#set $ws7           "7"
-#set $ws8           "8"
-#workspace 1        output $scr1
-#workspace 2        output $scr1
-#workspace 3        output $scr1
-#workspace 4        output $scr1
-#workspace 5        output $scr2
-#workspace 6        output $scr2
-#workspace 7        output $scr2
-#workspace 8        output $scr2
