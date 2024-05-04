@@ -82,7 +82,7 @@
 	"cpu": {
 		"interval"                 : 1,
 		"format"                   : " {max_frequency:0.2f}GHz | {usage}%",
-		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -e htop"
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -e htop"
 	},
 
 	"clock": {
@@ -94,7 +94,7 @@
 	"memory": {
 		"interval"                 : 10,
 		"format"                   : " {used:0.2f} / {total:0.0f} GB",
-		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh kitty -e htop"
+		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -e htop"
 	},
 
 	"network": {

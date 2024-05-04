@@ -30,6 +30,7 @@ blurlock() {
 		if [[ -f "$HOME/.cache/swaylock.lock" ]] && [[ -z "$(ps aux | grep -v grep | grep swaylock)" ]]; then
 			blurlock
 		fi
+		sleep 1
 	done
 }
 
@@ -46,6 +47,7 @@ case $MODE in
     ;;
     2)
         touch $HOME/.cache/swaylock.lock
+	sleep 1
         systemctl suspend
     ;;
     3)

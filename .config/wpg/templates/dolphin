@@ -1,0 +1,36 @@
+MenuBar=Disabled
+
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[ContextMenu]
+ShowAddToPlaces=false
+ShowViewMode=false
+
+[General]
+RememberOpenedTabs=false
+Version=202
+ViewPropsTimestamp=2023,6,21,11,55,45.881
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PreviewSettings]
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
+
+[Colors:View]
+BackgroundAlternate=#390f31
+BackgroundNormal=#11050f
+ForegroundActive=#390f31
+ForegroundNormal=#ffede7
+ForegroundInactive=#A55A5D
+
+

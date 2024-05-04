@@ -32,5 +32,9 @@
    <bool>true</bool>
   </edit>
  </match>
- <dir>~/.fonts</dir>
+ <match target="font">
+  <edit mode="assign" name="rgba">
+   <const>rgb</const>
+  </edit>
+ </match>
 </fontconfig>
