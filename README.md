@@ -1,5 +1,4 @@
 # swaydotfiles
 Dotfiles on my Sway Setup
 
-![image](https://github.com/inspectorgadget03/swaydotfiles/assets/62564400/f5ab8290-e490-4186-ba27-6df3babed959)
-
+![image](https://github.com/mt190502/swaydotfiles/assets/62564400/fcf4fd49-718f-4fa8-89d5-b4146d732ed2)
