@@ -34,7 +34,7 @@ blurlock() {
 	done
 }
 
-MODE=$(swaynag -t wpgtheme -m PowerMenu -Z Shutdown 'echo 0' -Z Reboot 'echo 1' -Z Suspend 'echo 2' -Z Lock 'echo 3' -Z Logout 'echo 4')
+MODE=$(swaynag -t wpgtheme -m PowerMenu -Z Shutdown 'echo 0' -Z Reboot 'echo 1' -Z Suspend 'echo 2' -Z Hibernate 'echo 3' -Z Lock 'echo 4' -Z Logout 'echo 5')
 [[ ! -n "$MODE" ]] && exit
 CONFIRM=$(swaynag -t wpgtheme -m Confirm? -Z No 'echo no' -Z Yes 'echo yes')
 [[ $CONFIRM != "yes" ]] && exit
@@ -52,8 +52,13 @@ case $MODE in
     ;;
     3)
         touch $HOME/.cache/swaylock.lock
+	sleep 1
+        systemctl hibernate
     ;;
     4)
+        touch $HOME/.cache/swaylock.lock
+    ;;
+    5)
         swaymsg exit
     ;;
     *)
