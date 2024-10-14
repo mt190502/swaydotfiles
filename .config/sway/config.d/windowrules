@@ -11,90 +11,88 @@
 #####
 ## Workspace 2 ~ Browser
 ####
-for_window [app_id="firefox" title="Library"]                   floating enable
-for_window [app_id="firefox" title="Picture-in-Picture"]        floating enable
-for_window [app_id="firefox" title="(.*)Sharing Indicator"]     floating enable
-for_window [app_id="firefox" title="(.*)Private Browsing"]      floating enable
-for_window [app_id="firefox" title="Extension: (.*)"]           floating enable
-#for_window [app_id="firefox"]                                  workspace 2; move container workspace 2
+for_window [app_id="(firefox|LibreWolf)" title="Library"]                   floating enable
+for_window [app_id="(firefox|LibreWolf)" title="Picture-in-Picture"]        floating enable
+for_window [app_id="(firefox|LibreWolf)" title="(.*)Sharing Indicator"]     floating enable
+for_window [app_id="(firefox|LibreWolf)" title="(.*)Private Browsing"]      floating enable
+for_window [app_id="(firefox|LibreWolf)" title="Extension: (.*)"]           floating enable
+#for_window [app_id="firefox"]                                               workspace 2; move container workspace 2
 
 
 #####
 ## Workspace 3 ~ Text Editor and Terminal
 ####
-for_window [app_id="(?i)thunar"]                                workspace 3; floating enable; move container workspace 3
-for_window [app_id="org.kde.dolphin"]	                        floating enable
-#for_window [app_id="org.kde.kate"]                              workspace 3; move container workspace 3
+#for_window [app_id="(?i)thunar"]                                            workspace 3; floating enable; move container workspace 3
+for_window [app_id="org.kde.dolphin"]	                                    floating enable
+#for_window [app_id="org.kde.kate"]                                          workspace 3; move container workspace 3
 
 
 #####
 ## Workspace 4 ~ Media
 ####
-for_window [class="Steam" title="Steam - News(.*)"]             floating enable
-#for_window [class="Steam"]                                      workspace 4; move container workspace 4
-#for_window [class="vlc"]                                        workspace 4; move container workspace 4
+for_window [class="Steam" title="Steam - News(.*)"]                         floating enable
+#for_window [class="Steam"]                                                  workspace 4; move container workspace 4
+#for_window [class="vlc"]                                                    workspace 4; move container workspace 4
 
 
 #####
 ## Workspace 5 ~ Develop
 ####
-#for_window [class="jetbrains-(.*)"]                             workspace 5; move container workspace 5
+#for_window [class="jetbrains-(.*)"]                                         workspace 5; move container workspace 5
 
 
 #####
 ## Workspace 6 ~ Social
 ####
-#for_window [class="discord"]                                    workspace 6; move container workspace 6
-#for_window [app_id="org.telegram.desktop"]                      workspace 6; move container workspace 6
+#for_window [class="discord"]                                                workspace 6; move container workspace 6
+#for_window [app_id="org.telegram.desktop"]                                  workspace 6; move container workspace 6
 
 
 #####
 ## Workspace 7 ~ System Tools
 ####
-#for_window [app_id="SoundWireServer"]                           workspace 7; floating enable; move container workspace 7
-#for_window [app_id="firetools"]                                 workspace 7; floating enable; move container workspace 7
-#for_window [app_id="firewall-config"]                           workspace 7; floating enable; move container workspace 7
-#for_window [app_id="gnome-control-center"]                      workspace 7; floating enable; move container workspace 7
-#for_window [app_id="qt5ct"]                                     workspace 7; floating enable; move container workspace 7
-#for_window [app_id="system-config-printer"]                     workspace 7; floating enable; move container workspace 7
-#for_window [app_id="wpg"]                                       workspace 7; floating enable; move container workspace 7
-#for_window [class="(?i)Lxappearance$"]                          workspace 7; floating enable; move container workspace 7
+#for_window [app_id="SoundWireServer"]                                       workspace 7; floating enable; move container workspace 7
+#for_window [app_id="firetools"]                                             workspace 7; floating enable; move container workspace 7
+#for_window [app_id="firewall-config"]                                       workspace 7; floating enable; move container workspace 7
+#for_window [app_id="gnome-control-center"]                                  workspace 7; floating enable; move container workspace 7
+#for_window [app_id="qt5ct"]                                                 workspace 7; floating enable; move container workspace 7
+#for_window [app_id="system-config-printer"]                                 workspace 7; floating enable; move container workspace 7
+#for_window [app_id="wpg"]                                                   workspace 7; floating enable; move container workspace 7
+#for_window [class="(?i)Lxappearance$"]                                      workspace 7; floating enable; move container workspace 7
 
 
 #####
 ## Workspace 8
 ####
-#for_window [class="obsidian"]                                   workspace 8; move container workspace 8
+#for_window [class="obsidian"]                                               workspace 8; move container workspace 8
 
 
 #####
 ## Other
 ####
-for_window [app_id="com.usebottles.bottles"]                    floating enable
-for_window [app_id="gnome-calculator"]                          floating enable
-for_window [app_id="io.crow_translate.CrowTranslate"]           floating enable
-for_window [app_id="Alacritty" title="wttr.in"]                 floating enable
-for_window [app_id="Alacritty" title="nmtui"]                   floating enable
-for_window [app_id="flameshot" title="flameshot"]               floating enable, fullscreen disable, move absolute position 0 0
-for_window [app_id="nm-connection-editor$"]                     floating enable
-for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]   floating enable
-for_window [app_id="org.kde.discover"]                          floating enable
-for_window [app_id="org.kde.kalk"]                              floating enable
-for_window [app_id="org.oe-f.openboard"]                        floating enable
-for_window [app_id="org.kde.polkit-kde-authentication-agent-1"] floating enable
-for_window [app_id="pamac-manager"]                             floating enable
-for_window [app_id="pavucontrol"]                               floating enable
-for_window [app_id="setroubleshoot"]                            floating enable
-for_window [app_id="simple-scan"]                               floating enable
-for_window [app_id="tlp-ui"]                                    floating enable
-for_window [app_id="Waydroid"]                                  floating enable
-for_window [app_id="zoom"]                                      floating enable
-for_window [class="jetbrains-(.*)" title="Welcome to (.*)"]     floating enable
-for_window [class="jetbrains-(.*)" title="splash"]              floating enable
-for_window [shell="xwayland"]                                   title_format "[X] %title"
-for_window [window_role="Preferences"]                          floating enable
-for_window [window_role="bubble"]                               floating enable
-for_window [window_role="pop-up"]                               floating enable
-for_window [window_role="task_dialog"]                          floating enable
-for_window [window_type="dialog"]                               floating enable
-for_window [window_type="menu"]                                 floating enable
+for_window [app_id="com.usebottles.bottles"]                                floating enable
+for_window [app_id="org.gnome.Calculator"]                                  floating enable
+for_window [app_id="Alacritty" title="wttr.in"]                             floating enable
+for_window [app_id="Alacritty" title="nmtui"]                               floating enable
+for_window [app_id="flameshot" title="flameshot"]                           floating enable, fullscreen disable, move absolute position 0 0
+for_window [app_id="mpv"]                                                   floating enable
+for_window [app_id="nm-connection-editor$"]                                 floating enable
+for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]               floating enable
+for_window [app_id="org.kde.discover"]                                      floating enable
+for_window [app_id="org.oe-f.openboard"]                                    floating enable
+for_window [app_id="org.kde.polkit-kde-authentication-agent-1"]             floating enable
+for_window [app_id="pavucontrol"]                                           floating enable
+for_window [app_id="setroubleshoot"]                                        floating enable
+for_window [app_id="simple-scan"]                                           floating enable
+for_window [app_id="tlp-ui"]                                                floating enable
+for_window [app_id="Waydroid"]                                              floating enable
+for_window [app_id="zoom"]                                                  floating enable
+for_window [class="jetbrains-(.*)" title="Welcome to (.*)"]                 floating enable
+for_window [class="jetbrains-(.*)" title="splash"]                          floating enable
+for_window [shell="xwayland"]                                               title_format "[X] %title", border pixel 8
+for_window [window_role="Preferences"]                                      floating enable
+for_window [window_role="bubble"]                                           floating enable
+for_window [window_role="pop-up"]                                           floating enable
+for_window [window_role="task_dialog"]                                      floating enable
+for_window [window_type="dialog"]                                           floating enable
+for_window [window_type="menu"]                                             floating enable

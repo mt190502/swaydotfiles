@@ -9,8 +9,8 @@
 #################################################
 #################################################
 #~~~ Default mod button (Mod1: Alt, Mod4: Super)
-set $mod Mod1
-set $altMod Mod4
+set $mod Mod4
+set $altMod Mod1
 
 #~~~ Include other configuration files
 include $HOME/.config/sway/config.d/*

@@ -9,31 +9,21 @@ exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSO
 exec dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHORITY SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
 
 #~~~ startup apps
-#exec /usr/bin/bash -c "XDG_CURRENT_DESKTOP=kde QT_STYLE_OVERRIDE= /usr/libexec/kf6/polkit-kde-authentication-agent-1"
-exec /usr/bin/bash -c "sleep 2 && nextcloud"
-exec /usr/bin/easyeffects --gapplication-service
-exec /usr/bin/mako
-exec /usr/bin/seapplet
+exec $HOME/.config/sway/scripts.d/powermenu.sh --daemonize
+exec /usr/bin/bash -c 'sleep 5 && for app in $(realpath ~/.config/autostart/*); do echo $app; gio launch $app; done'
 exec /usr/bin/solaar -w hide
 exec /usr/bin/swayidle -w timeout 120 "~/.config/sway/scripts.d/powermenu.sh --lock" timeout 140 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec /usr/bin/tmux new-session -ds daemonmodetmux
 exec /usr/bin/wl-paste -w $HOME/scripts/cliphist store
 exec /usr/bin/wlsunset -S "07:00" -s "19:00"
 exec /usr/libexec/kdeconnectd
+exec /usr/libexec/kf6/polkit-kde-authentication-agent-1
 exec /usr/libexec/packagekitd
-exec /usr/libexec/polkit-gnome-authentication-agent-1
-exec /usr/libexec/xdg-desktop-portal
-exec $HOME/.config/sway/scripts.d/powermenu.sh --daemonize
+
+exec_always $HOME/.config/sway/scripts.d/tmux_server.sh
 exec_always $HOME/.config/sway/scripts.d/workspace.sh init 1
-exec_always $HOME/.config/sway/scripts.d/tmuxServer.sh
+#exec_always --no-startup-id $HOME/.config/sway/scripts.d/screen_setup.sh
 
-
-
-
-
-#exec flatpak run com.github.wwmm.easyeffects --gapplication-service
+#~~~ others
 #exec $HOME/.config/sway/scripts.d/starter.sh
 #exec bash -c "while true; do wpg -m; sleep 1800; done"
-#exec --no-startup-id $HOME/.config/sway/scripts.d/keyring.sh
-#exec_always --no-startup-id $HOME/.config/sway/scripts.d/screensetup.sh
-#exec_always --no-startup-id $HOME/.config/sway/scripts.d/officemode.sh

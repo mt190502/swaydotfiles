@@ -27,10 +27,10 @@ ToolButtonStyle=IconOnly
 Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail,textthumbnail,ffmpegthumbs
 
 [Colors:View]
-BackgroundAlternate=#3e2321
-BackgroundNormal=#1e1110
-ForegroundActive=#3e2321
-ForegroundNormal=#ffffe4
-ForegroundInactive=#CA6930
+BackgroundAlternate=#302a1f
+BackgroundNormal=#12100c
+ForegroundActive=#302a1f
+ForegroundNormal=#eefdff
+ForegroundInactive=#0A73C7
 
 

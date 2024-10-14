@@ -137,6 +137,10 @@ import = [
 #################################################
 [font]
 size = 9
+#normal      = { family = "Cascadia Code NF", style = "Regular" }
+#bold        = { family = "Cascadia Code NF", style = "Bold" }
+#italic      = { family = "Cascadia Code NF", style = "Italic" }
+#bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
 normal      = { family = "MesloLGS NF", style = "Bold" }
 bold        = { family = "Hack", style = "Bold" }
 italic      = { family = "Hack", style = "Italic" }

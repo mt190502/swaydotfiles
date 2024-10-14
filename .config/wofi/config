@@ -5,5 +5,5 @@ key_expand=Tab
 line_wrap=word_char
 mode=dmenu
 no_actions=true
-term=kitty
+term=alacritty
 width=40%

@@ -4,7 +4,6 @@
 #### Program Toggler
 ##
 #################################################
-
 [[ ! -n "$@" ]] && exit
 
 if [[ -n "$(ps aux | grep -vE "grep|programtoggle" | grep -i "$*")" ]]; then

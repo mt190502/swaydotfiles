@@ -1,4 +1,9 @@
 #!/bin/bash
+#################################################
+##
+#### Workspace creator for per monitor
+##
+#################################################
 [[ -z $1 ]] && { notify-send "No mode specified..."; exit; }
 [[ -z $2 ]] && { notify-send "No workspace specified..."; exit; }
 active_monitor=$(swaymsg -t get_outputs | jq -r '.[] | select (.focused) | .name')

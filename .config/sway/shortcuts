@@ -1,0 +1,53 @@
+Mod: win
+
+Mod+q      : Quit                         | Mod+Shift+q      : 
+Mod+w      : Tabbed                       | Mod+Shift+w      : 
+Mod+e      : Tiled                        | Mod+Shift+e      : 
+Mod+r      : Resize                       | Mod+Shift+r      : Reload
+Mod+t      :                              | Mod+Shift+t      : 
+Mod+y      :                              | Mod+Shift+y      : 
+Mod+u      :                              | Mod+Shift+u      : 
+Mod+i      :                              | Mod+Shift+i      : 
+Mod+o      :                              | Mod+Shift+o      : 
+Mod+p      :                              | Mod+Shift+p      : 
+Mod+a      :                              | Mod+Shift+a      : 
+Mod+s      : Stacked                      | Mod+Shift+s      : Screenshot menu
+Mod+d      : Wofi                         | Mod+Shift+d      : OCR
+Mod+f      : Fullscreen                   | Mod+Shift+f      : OCR + Translate
+Mod+g      :                              | Mod+Shift+g      :
+Mod+h      :                              | Mod+Shift+h      :
+Mod+j      :                              | Mod+Shift+j      :
+Mod+k      :                              | Mod+Shift+k      :
+Mod+l      : Lock                         | Mod+Shift+l      :
+Mod+z      :                              | Mod+Shift+z      :
+Mod+x      :                              | Mod+Shift+x      :
+Mod+c      :                              | Mod+Shift+c      :
+Mod+v      : Clipboard                    | Mod+Shift+v      : Clear clipboard
+Mod+b      :                              | Mod+Shift+b      :
+Mod+n      :                              | Mod+Shift+n      :
+Mod+m      :                              | Mod+Shift+m      :
+Mod+comma  :                              | Mod+Shift+comma  :
+Mod+period : Emoji                        | Mod+Shift+period :
+Mod+space  :                              | Mod+Shift+space  : Floating toggle
+Mod+left   : Left focus                   | Mod+Shift+left   : Move window left
+Mod+right  : Right focus                  | Mod+Shift+right  : Move window right
+Mod+up     : Up focus                     | Mod+Shift+up     : Move window up
+Mod+down   : Down Focus                   | Mod+Shift+down   : Move window down
+Mod+Tab    : Apptray                      | Mod+Shift+Tab    :
+Mod+Return : Terminal                     | Mod+Shift+Return :
+Mod+Escape :                              | Mod+Shift+Escape :
+Mod+Delete :                              | Mod+Shift+Delete :
+Mod+Home   :                              | Mod+Shift+Home   :
+Mod+End    :                              | Mod+Shift+End    :
+Mod+Print  :                              | Mod+Shift+Print  :
+Mod+0      :                              | Mod+Shift+0      :
+Mod+1      : Switch to workspace          | Mod+Shift+1      : Move window to workspace
+Mod+2      : Switch to workspace          | Mod+Shift+2      : Move window to workspace
+Mod+3      : Switch to workspace          | Mod+Shift+3      : Move window to workspace
+Mod+4      : Switch to workspace          | Mod+Shift+4      : Move window to workspace
+Mod+5      : Switch to workspace          | Mod+Shift+5      : Move window to workspace
+Mod+6      : Switch to workspace          | Mod+Shift+6      : Move window to workspace
+Mod+7      : Switch to workspace          | Mod+Shift+7      : Move window to workspace
+Mod+8      : Switch to workspace          | Mod+Shift+8      : Move window to workspace
+
+Ctrl+period: Dropdown Terminal            | Ctrl+Shift+period:

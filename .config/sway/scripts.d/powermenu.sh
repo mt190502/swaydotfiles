@@ -10,7 +10,6 @@ WAYLAND_DISPLAY=wayland-1
 #~~~ lock function
 blurlock() {
     [[ -n "$(ps aux | grep -v grep | grep swaylock)" ]] && exit
-    touch $HOME/.cache/swaylock.lock
     for output in $(swaymsg -t get_outputs | jq -r '.[].name'); do
         image=/tmp/$output-lock
 	[[ -e $image ]] && rm $image
@@ -18,13 +17,14 @@ blurlock() {
         convert -blur 0x10 $image.png $image-blurred.png
         args="$args --image $output:$image-blurred.png"
     done
+    touch $HOME/.cache/swaylock.lock
     WAYLAND_DISPLAY=$WAYLAND_DISPLAY swaylock $args
     rm -f $HOME/.cache/swaylock.lock
 }
 
 #~~~ menu
 [[ "$@" == "--lock" ]] && { blurlock; exit 0; }
-[[ "$@" == "--suspend" ]] && { blurlock; sleep 1; systemctl suspend; exit 0; }
+[[ "$@" == "--suspend" ]] && { blurlock; sleep 2; systemctl suspend; exit 0; }
 [[ "$@" == "--daemonize" ]] && {
 	while true; do
 		if [[ -f "$HOME/.cache/swaylock.lock" ]] && [[ -z "$(ps aux | grep -v grep | grep swaylock)" ]]; then

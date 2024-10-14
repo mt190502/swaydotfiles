@@ -17,20 +17,17 @@ bindsym $mod+Shift+Right                                       move right
 
 #~~~ window
 mode "resize" {
-    bindsym Right resize                                       shrink width 10 px or 10 ppt
-    bindsym Up resize                                          grow height 10 px or 10 ppt
+    bindsym Right resize                                       shrink width  10 px or 10 ppt
+    bindsym Up resize                                          grow   height 10 px or 10 ppt
     bindsym Down resize                                        shrink height 10 px or 10 ppt
-    bindsym Left resize                                        grow width 10 px or 10 ppt
+    bindsym Left resize                                        grow   width  10 px or 10 ppt
     bindsym Return mode                                        "default"
     bindsym Escape mode                                        "default"
     bindsym $mod+r mode                                        "default"
 }
 bindsym $mod+r                                                  mode "resize"
-bindsym $mod+h                                                  split h
-bindsym $mod+v                                                  split v
 bindsym $mod+f                                                  fullscreen
 bindsym $mod+Shift+space                                        floating toggle
-#bindsym $mod+Tab                                               focus parent
 bindsym $mod+shift+1                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 1
 bindsym $mod+shift+2                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 2
 bindsym $mod+shift+3                                            exec $HOME/.config/sway/scripts.d/workspace.sh move-container 3
@@ -44,7 +41,6 @@ bindsym $mod+shift+8                                            exec $HOME/.conf
 bindsym $mod+s                                                  layout stacking
 bindsym $mod+w                                                  layout tabbed
 bindsym $mod+e                                                  layout toggle split
-bindsym $mod+Tab                                                workspace next
 bindsym $mod+1                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 1
 bindsym $mod+2                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 2
 bindsym $mod+3                                                  exec $HOME/.config/sway/scripts.d/workspace.sh switch 3
@@ -64,9 +60,29 @@ bindsym XF86MonBrightnessUp                                     exec brightnessc
 bindsym XF86MonBrightnessDown                                   exec brightnessctl set 5%-
 
 #~~~ screenshot
-bindsym $altMod+shift+s                                         exec $HOME/.config/sway/scripts.d/screenshot.sh -r
-bindsym ctrl+print                                              exec $HOME/.config/sway/scripts.d/screenshot.sh -a
-bindsym print                                                   exec $HOME/.config/sway/scripts.d/screenshot.sh -f
+mode "screenshot" {
+    bindsym $mod+shift+s                                        exec $HOME/.config/sway/scripts.d/screenshot.sh -r; mode "default"
+    bindsym a                                                   exec $HOME/.config/sway/scripts.d/screenshot.sh -a; mode "default"
+    bindsym f                                                   exec $HOME/.config/sway/scripts.d/screenshot.sh -f; mode "default"
+    bindsym Return mode                                         "default"
+    bindsym Escape mode                                         "default"
+}
+bindsym $mod+shift+s                                            mode "screenshot"
+
+#~~~ clipboard
+bindsym $mod+v                                                  exec $HOME/scripts/cliphist list | wofi --show dmenu | $HOME/scripts/cliphist decode | wl-copy
+bindsym $mod+shift+v                                            exec $HOME/scripts/cliphist wipe
+
+#~~~ apptray
+mode "apptray" {
+    bindsym q                                                   exec $browser    ; mode "default"
+    bindsym s                                                   exec $filemanager; mode "default"
+    bindsym x                                                   exec $media      ; mode "default"
+    bindsym Return mode                                         "default"
+    bindsym Escape mode                                         "default"
+    bindsym $mod+Tab mode                                       "default"
+}
+bindsym $mod+Tab                                                mode "apptray"
 
 #~~~ playerctl
 bindsym XF86AudioPlay                                           exec playerctl play-pause
@@ -80,23 +96,11 @@ bindsym $altMod+Right                                           exec playerctl n
 bindsym $mod+Shift+r                                            reload
 bindsym $mod+q                                                  kill
 
-#~~~ macros
-bindsym $altMod+u                                               exec wtype -P home  
-bindsym $altMod+i                                               exec wtype -P next  
-bindsym $altMod+o                                               exec wtype -P prior 
-bindsym $altMod+p                                               exec wtype -P end   
-bindsym $altMod+h                                               exec wtype -P left  
-bindsym $altMod+j                                               exec wtype -P down  
-bindsym $altMod+k                                               exec wtype -P up    
-bindsym $altMod+l                                               exec wtype -P right 
-
 #~~~ other
 bindsym $mod+Return                                             exec $terminal -e bash -c "tmux new-window && tmux attach -t daemonmodetmux"
 bindsym $mod+d                                                  exec $HOME/.config/sway/scripts.d/programtoggle.sh $menu
-bindsym $altMod+e                                               exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/wofi-emoji.sh
-bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdownTerminal.sh
-bindsym $altMod+v                                               exec $HOME/scripts/cliphist list | wofi --show dmenu | $HOME/scripts/cliphist decode | wl-copy
-bindsym $altMod+shift+v                                         exec $HOME/scripts/cliphist wipe
-bindsym $altMod+shift+d                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -e 
-bindsym $altMod+shift+f                                         exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t
-bindsym ctrl+$altMod+l                                          exec $HOME/.config/sway/scripts.d/powermenu.sh --lock
+bindsym $mod+l                                                  exec $HOME/.config/sway/scripts.d/powermenu.sh --lock
+bindsym $mod+period                                             exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/wofimoji.sh
+bindsym $mod+shift+d                                            exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -e
+bindsym $mod+shift+f                                            exec $HOME/.config/sway/scripts.d/programtoggle.sh $HOME/.config/sway/scripts.d/tesseract.sh -t
+bindsym ctrl+period                                             exec $HOME/.config/sway/scripts.d/dropdown_term.sh
