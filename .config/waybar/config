@@ -4,7 +4,7 @@
 	//// Bar configuration
 	//
 	/////////////////////////////////////////////////
-	"height"  : 28,
+	"height"  : 27,
 	"position": "top",
 
 
@@ -16,7 +16,7 @@
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
 	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
-	"modules-right"  : [ "tray", "custom/space", "cpu", "custom/space", "memory", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "custom/vpn", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/powermenu", "custom/space" ],
+	"modules-right"  : [ "tray", "custom/space", "memory", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/dnd", "custom/space", "custom/powermenu", "custom/space" ],
 
 
 
@@ -31,16 +31,6 @@
 			"focused"              : "",
 			"default"              : ""
 		},
-	//	"persistent-workspaces"    : {
-	//		"1"                    : ["SCREEN1"],
-	//		"2"                    : ["SCREEN1"],
-	//		"3"                    : ["SCREEN1"],
-	//		"4"                    : ["SCREEN1"],
-	//		"5"                    : ["SCREEN2"],
-	//		"6"                    : ["SCREEN2"],
-	//		"7"                    : ["SCREEN2"],
-	//		"8"                    : ["SCREEN2"],
-	//	}
 	},
 
 	"sway/mode": {
@@ -110,8 +100,6 @@
 	"pulseaudio": {
 		"tooltip"                  : false,
 		"format"                   : "{icon} {volume}%  {format_source}",
-//		"format-bluetooth"         : "{icon}  {volume}%",
-//		"format-bluetooth-muted"   : "{icon}  ",
 		"format-muted"             : "",
 		"format-source"            : "{volume}% ",
 		"format-source-muted"      : "",
@@ -132,7 +120,7 @@
 	},
 
 	"battery": {
-		//"bat"                      : "BAT2",
+		"bat"                      : "BAT0",
 		"interval"                 : 60,
 		"states": {
 			"warning"              : 30,
@@ -159,7 +147,7 @@
 	///////////////////////////////////////////////////
 	"custom/space": {
 		"format"                   : "  ",
-		"tooltip"                  : false,
+		"tooltip"                  : false
 	},
 
 	"custom/fan": {
@@ -180,6 +168,15 @@
 		"format"                   : "",
 		"tooltip"                  : false
 	},
+
+	"custom/dnd": {
+		"format"                   : "{}",
+		"interval"                 : 1,
+		"exec"                     : "$HOME/.config/sway/scripts.d/dnd.sh status",
+		"on-click"                 : "$HOME/.config/sway/scripts.d/dnd.sh",
+		"return-type"              : "json"
+	},
+
 	"custom/weather": {
 		"format"                   : "{}",
 		"interval"                 : 3600,
@@ -187,6 +184,7 @@
 		"exec-if"                  : "ping wttr.in -c1",
 		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -T wttr.in -e sh -c 'curl https://wttr.in/Istanbul; read'"
 	},
+
 	"custom/vpn": {
 		"format"                   : "{}",
 		"interval"                 : 1,
@@ -194,5 +192,5 @@
 		"on-click"                 : "$HOME/scripts/togglevpn sm",
 		"on-click-right"           : "$HOME/scripts/togglevpn tm",
 		"return-type"              : "json"
-	},
+	}
 }
