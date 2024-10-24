@@ -15,7 +15,7 @@
 	//
 	/////////////////////////////////////////////////
 	"modules-left"   : [ "custom/space", "sway/workspaces", "custom/space", "sway/window" ],
-	"modules-center" : [ "sway/mode", "custom/space", "clock", "custom/space", "custom/weather" ],
+	"modules-center" : [ "sway/mode", "custom/space", "custom/pomobar", "custom/space", "clock", "custom/space", "custom/weather" ],
 	"modules-right"  : [ "tray", "custom/space", "memory", "custom/space", "idle_inhibitor", "custom/space", "sway/language", "custom/space", "network", "custom/space", "bluetooth", "custom/space", "pulseaudio", "custom/space", "custom/dnd", "custom/space", "custom/powermenu", "custom/space" ],
 
 
@@ -49,7 +49,7 @@
 		"format-icons"             : ["", "<U+F2D2>"],
 		"tooltip"                  : true,
 		"tooltip-format"           : "{app}: {title}"
-    },
+	},
 
 	"sway/window": {
 		"format"                   : "{}",
@@ -66,7 +66,8 @@
 	},
 
 	"tray": {
-		"spacing"                  : 5
+		"spacing"                  : 5,
+		"show-passive-items"       : true
 	},
 
 	"cpu": {
@@ -116,7 +117,8 @@
 		"on-click"                 : "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-right"           : "$HOME/.config/sway/scripts.d/programtoggle.sh pavucontrol",
 		"on-scroll-up"             : "pactl set-sink-volume @DEFAULT_SINK@ +5%",
-		"on-scroll-down"           : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+		"on-scroll-down"           : "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+		"ignored-sinks"            : ["Easy Effects Sink"]
 	},
 
 	"battery": {
@@ -183,6 +185,16 @@
 		"exec"                     : "curl -s 'https://wttr.in/Istanbul?format=1' | sed 's/ //1'",
 		"exec-if"                  : "ping wttr.in -c1",
 		"on-click"                 : "$HOME/.config/sway/scripts.d/programtoggle.sh alacritty msg create-window -T wttr.in -e sh -c 'curl https://wttr.in/Istanbul; read'"
+	},
+
+	"custom/pomobar": {
+		"format"                   : "{}",
+		"interval"                 : 1,
+                "exec"                     : "$HOME/scripts/pomobar-client status",
+		"on-click"                 : "$HOME/scripts/pomobar-client pause",
+		"on-click-middle"          : "$HOME/scripts/pomobar-client reset",
+		"on-click-right"           : "$HOME/scripts/pomobar-client resume",
+		"return-type"              : "json"
 	},
 
 	"custom/vpn": {

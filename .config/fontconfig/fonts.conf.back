@@ -33,8 +33,24 @@
   </edit>
  </match>
  <match target="font">
+  <edit mode="assign" name="hinting">
+   <bool>true</bool>
+  </edit>
+ </match>
+ <match target="font">
+  <edit mode="assign" name="hintstyle">
+   <const>hintslight</const>
+  </edit>
+ </match>
+ <match target="font">
   <edit mode="assign" name="rgba">
    <const>rgb</const>
   </edit>
  </match>
+ <match target="font">
+  <edit mode="assign" name="antialias">
+   <bool>true</bool>
+  </edit>
+ </match>
+ <dir>~/.fonts</dir>
 </fontconfig>

@@ -59,6 +59,7 @@ case $MODE in
         touch $HOME/.cache/swaylock.lock
     ;;
     5)
+	rm $XDG_RUNTIME_DIR/.autostart
         swaymsg exit
     ;;
     *)

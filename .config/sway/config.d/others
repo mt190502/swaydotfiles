@@ -10,20 +10,22 @@ exec dbus-update-activation-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XAUTHOR
 
 #~~~ startup apps
 exec $HOME/.config/sway/scripts.d/powermenu.sh --daemonize
-exec /usr/bin/bash -c 'sleep 5 && for app in $(realpath ~/.config/autostart/*); do echo $app; gio launch $app; done'
+exec /usr/bin/bash -c 'sleep 5 && for app in $(realpath ~/.config/autostart/*); do gio launch $app; done'
 exec /usr/bin/solaar -w hide
 exec /usr/bin/swayidle -w timeout 120 "~/.config/sway/scripts.d/powermenu.sh --lock" timeout 140 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec /usr/bin/tmux new-session -ds daemonmodetmux
 exec /usr/bin/wl-paste -w $HOME/scripts/cliphist store
 exec /usr/bin/wlsunset -S "07:00" -s "19:00"
-exec /usr/libexec/kdeconnectd
+exec /usr/bin/kdeconnectd
 exec /usr/libexec/kf6/polkit-kde-authentication-agent-1
 exec /usr/libexec/packagekitd
+exec $HOME/scripts/pomobar-server
 
 exec_always $HOME/.config/sway/scripts.d/tmux_server.sh
 exec_always $HOME/.config/sway/scripts.d/workspace.sh init 1
 #exec_always --no-startup-id $HOME/.config/sway/scripts.d/screen_setup.sh
 
 #~~~ others
+exec $HOME/.config/sway/scripts.d/autostart.sh
 #exec $HOME/.config/sway/scripts.d/starter.sh
 #exec bash -c "while true; do wpg -m; sleep 1800; done"

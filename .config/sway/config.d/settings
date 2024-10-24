@@ -10,7 +10,7 @@ default_border                                   pixel 5
 default_floating_border                          none
 floating_modifier                                $mod
 hide_edge_borders --i3                           none
-workspace_layout default
+workspace_layout                                 tabbed
 
 #~~~ theme
 # class                 border         backgr         text         indicator      child_border

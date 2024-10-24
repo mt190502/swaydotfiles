@@ -14,7 +14,6 @@
 for_window [app_id="(firefox|LibreWolf)" title="Library"]                   floating enable
 for_window [app_id="(firefox|LibreWolf)" title="Picture-in-Picture"]        floating enable
 for_window [app_id="(firefox|LibreWolf)" title="(.*)Sharing Indicator"]     floating enable
-for_window [app_id="(firefox|LibreWolf)" title="(.*)Private Browsing"]      floating enable
 for_window [app_id="(firefox|LibreWolf)" title="Extension: (.*)"]           floating enable
 #for_window [app_id="firefox"]                                               workspace 2; move container workspace 2
 
