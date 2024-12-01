@@ -5,6 +5,7 @@
 #################################################
 #~~~ apps
 #set $appstore      plasma-discover
+#set $browser       flatpak run io.github.zen_browser.zen
 set $browser       flatpak run io.gitlab.librewolf-community
 #set $imageviewer   flatpak run org.kde.gwenview
 set $filemanager   dolphin

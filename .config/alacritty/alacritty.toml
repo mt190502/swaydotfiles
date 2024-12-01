@@ -1,3 +1,36 @@
+
+
+
+#################################################
+##
+#### Fonts
+##
+#################################################
+[font]
+size = 9
+#normal      = { family = "Cascadia Code NF", style = "Regular" }
+#bold        = { family = "Cascadia Code NF", style = "Bold" }
+#italic      = { family = "Cascadia Code NF", style = "Italic" }
+#bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
+normal      = { family = "MesloLGS NF", style = "Bold" }
+bold        = { family = "Hack", style = "Bold" }
+italic      = { family = "Hack", style = "Italic" }
+bold_italic = { family = "Hack", style = "Bold Italic" }
+
+
+
+#################################################
+##
+#### Settings
+##
+#################################################
+[terminal.shell]
+program = "tmux"
+
+[window]
+dynamic_title = true
+
+[general]
 #################################################
 ##
 #### Colors
@@ -128,34 +161,5 @@ import = [
 	#"~/.config/alacritty/themes/zenburn.toml",
 ]
 
-
-
-#################################################
-##
-#### Fonts
-##
-#################################################
-[font]
-size = 9
-#normal      = { family = "Cascadia Code NF", style = "Regular" }
-#bold        = { family = "Cascadia Code NF", style = "Bold" }
-#italic      = { family = "Cascadia Code NF", style = "Italic" }
-#bold_italic = { family = "Cascadia Code NF", style = "Bold Italic" }
-normal      = { family = "MesloLGS NF", style = "Bold" }
-bold        = { family = "Hack", style = "Bold" }
-italic      = { family = "Hack", style = "Italic" }
-bold_italic = { family = "Hack", style = "Bold Italic" }
-
-
-
-#################################################
-##
-#### Settings
-##
-#################################################
-[shell]
-program = "tmux"
-
-[window]
-dynamic_title = true
+[terminal]
 

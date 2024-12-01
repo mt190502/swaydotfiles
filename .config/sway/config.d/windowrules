@@ -11,10 +11,10 @@
 #####
 ## Workspace 2 ~ Browser
 ####
-for_window [app_id="(firefox|LibreWolf)" title="Library"]                   floating enable
-for_window [app_id="(firefox|LibreWolf)" title="Picture-in-Picture"]        floating enable
-for_window [app_id="(firefox|LibreWolf)" title="(.*)Sharing Indicator"]     floating enable
-for_window [app_id="(firefox|LibreWolf)" title="Extension: (.*)"]           floating enable
+for_window [app_id="(firefox|LibreWolf)" title="^Library"]                   floating enable
+for_window [app_id="(firefox|LibreWolf)" title="^Picture-in-Picture"]        floating enable
+for_window [app_id="(firefox|LibreWolf)" title="^(.*)Sharing Indicator"]     floating enable
+for_window [app_id="(firefox|LibreWolf)" title="^Extension:.*"]              floating enable
 #for_window [app_id="firefox"]                                               workspace 2; move container workspace 2
 
 
@@ -74,7 +74,6 @@ for_window [app_id="org.gnome.Calculator"]                                  floa
 for_window [app_id="Alacritty" title="wttr.in"]                             floating enable
 for_window [app_id="Alacritty" title="nmtui"]                               floating enable
 for_window [app_id="flameshot" title="flameshot"]                           floating enable, fullscreen disable, move absolute position 0 0
-for_window [app_id="mpv"]                                                   floating enable
 for_window [app_id="nm-connection-editor$"]                                 floating enable
 for_window [app_id="org.freedesktop.impl.portal.desktop.kde"]               floating enable
 for_window [app_id="org.kde.discover"]                                      floating enable
